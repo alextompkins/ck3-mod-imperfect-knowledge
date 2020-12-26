@@ -511,6 +511,7 @@ window = {
 					margin_bottom = 5
 
 					hbox = {
+						visible = "0"
 						layoutpolicy_horizontal = expanding
 						spacing = 5
 						margin = { 10 0 }
