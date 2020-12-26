@@ -1529,8 +1529,10 @@ window = {
 
 								vbox = {
 									tooltip = "[Character.GetGoldTooltipWithBalance]"
+									tooltip_enabled = "[LessThan_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]"
 									min_width = 40
 									spacing = -2
+									#visible = "[Or (Character.IsLocalPlayer, (Character.GetGold|0) < 0)]"
 
 									icon = {
 										name = "icon_gold"
@@ -1538,12 +1540,23 @@ window = {
 										texture = "gfx/interface/icons/icon_gold.dds"
 									}
 
-									text_single = {
-										name = "total_gold"
-										text = "[Character.GetGold|0]"
+									text_single = { # gold < 0
+										name = "total_gold_negative"
+										visible = "[LessThan_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]"
+										text = "[Character.GetGold|+0]"
 										default_format = "#high"
 										align = center|nobaseline
 									}
+									
+									text_single = { # gold > 0
+										name = "total_gold"
+										visible = "[GreaterThanOrEqualTo_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]"
+										text = "?"
+										default_format = "#high"
+										align = center|nobaseline
+									}
+									
+
 								}
 
 								vbox = {
