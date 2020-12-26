@@ -1567,13 +1567,13 @@ types Lists
 							}
 
 							icon = {
-								visible = "0"
+								visible = no
 								size = { 22 22 }
 								texture = "gfx/interface/icons/icon_soldier.dds"
 							}
 
 							text_single = {
-								visible = "0"
+								visible = no
 								layoutpolicy_horizontal = expanding
 								text = "[Character.GetMilitaryStrengthText]"
 								align = nobaseline

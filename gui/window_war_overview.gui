@@ -440,6 +440,7 @@ window = {
 							}
 
 							vbox = {
+								visible = "0"
 								layoutpolicy_horizontal = expanding
 								margin = { 5 0 }
 
@@ -519,7 +520,7 @@ window = {
 
 										blockoverride "portrait_button_template_tooltip"
 										{
-											tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+											#tooltip = "[WarParticipantItem.GetParticipantTooltip]"
 										}
 
 									}
@@ -630,7 +631,7 @@ window = {
 
 									blockoverride "portrait_button_template_tooltip"
 									{
-										tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]"
 									}
 
 
@@ -785,6 +786,7 @@ window = {
 							}
 
 							hbox = {
+								visible = "0"
 								layoutpolicy_horizontal = expanding
 
 								background = {
@@ -792,6 +794,7 @@ window = {
 								}
 
 								widget = {
+									#visible = "0"
 									size = { 55 60 }
 
 									icon = {
@@ -2328,7 +2331,7 @@ window = {
 									blockoverride "opinion_box" {}
 									blockoverride "portrait_button_template_tooltip"
 									{
-										tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]"
 									}
 								}
 
@@ -2353,6 +2356,7 @@ window = {
 										layoutpolicy_vertical = growing
 
 										soldiers_and_quality_small = {
+											visible = no
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}
 
@@ -2435,7 +2439,7 @@ window = {
 									blockoverride "opinion_box" {}
 									blockoverride "portrait_button_template_tooltip"
 									{
-										tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]"
 									}
 								}
 
@@ -2460,6 +2464,7 @@ window = {
 										layoutpolicy_vertical = growing
 
 										soldiers_and_quality_small = {
+											visible = no
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}
 
