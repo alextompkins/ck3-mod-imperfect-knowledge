@@ -144,6 +144,7 @@ window = {
 											}
 
 											hbox = {
+												visible = "0"
 												layoutpolicy_horizontal = expanding
 												margin_left = -10
 												margin_top = 10
