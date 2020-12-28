@@ -1487,7 +1487,8 @@ template CoA_Realm_Defaults
 		onrightclick = "[DefaultOnCharacterRightClick(Character.GetID)]"
 		button_ignore = none
 
-		tooltip_enabled = "[Not(IsInteractionMenuOpenForCharacter(Character.GetID))]"
+		#tooltip_enabled = "[Not(IsInteractionMenuOpenForCharacter(Character.GetID))]"
+		tooltip_enabled = no
 	}
 
 	using = State_Realm_MouseEntry

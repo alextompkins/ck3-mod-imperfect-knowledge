@@ -201,7 +201,8 @@ widget = {
 					onrightclick = "[DefaultOnCharacterRightClick(Character.GetID)]"
 					button_ignore = "[ProvinceIcon.GetArmyIgnoreClick]"
 
-					tooltip_enabled = "[Not(IsInteractionMenuOpenForCharacter(Character.GetID))]"
+					#tooltip_enabled = "[Not(IsInteractionMenuOpenForCharacter(Character.GetID))]"
+					tooltip_enabled = no
 				}
 			}
 
