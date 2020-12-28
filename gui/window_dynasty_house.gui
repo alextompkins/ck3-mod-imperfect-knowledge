@@ -391,6 +391,7 @@ window = {
 							}
 
 							text_single = {
+								visible = no
 								layoutpolicy_horizontal = expanding
 								text = "HOUSE_VIEW_MAX_MILITARY_STRENGTH"
 								autoresize = no
@@ -454,6 +455,7 @@ window = {
 								margin_left = 25
 
 								text_multi = {
+									visible = no
 									visible = "[NotEqualTo_int32(Character.GetDynasty.GetFoundedDynastyHousesCount, '(int32)1')]"
 									text = "DYNASTY_VIEW_BECOME_DYNAST"
 									default_format = "#weak"
@@ -1298,6 +1300,7 @@ window = {
 													default_format = "#weak"
 												}
 												text_single = {
+													visible = no
 													text = "HOUSE_LIST_HEAD_MAX_MILITARY_STRENGTH"
 													tooltip = "HOUSE_LIST_MILITARY_STRENGTH_TT"
 													align = right
