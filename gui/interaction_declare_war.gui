@@ -666,6 +666,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 
 										text_single = {
+											visible = no
 											name = "ally_military_strength_text"
 											text = "DECLARE_WAR_ALLY_MILITARY_STRENGTH_DESC"
 											align = nobaseline
