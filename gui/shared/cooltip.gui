@@ -1942,9 +1942,9 @@ template unit_icon_tooltip {
 						text = "- [UnitItem.GetArmy.GetNameNoTooltip]"
 					}
 
-					tooltipwidget = {
-						using = unit_icon_item_tooltip
-					}
+					#tooltipwidget = {
+						#using = unit_icon_item_tooltip
+					#}
 
 					using = tooltip_es
 				}
@@ -1952,6 +1952,7 @@ template unit_icon_tooltip {
 		}
 		container = {
 			visible = "[EqualTo_int32(GetDataModelSize(UnitMapIcon.GetUnitItems), '(int32)1')]"
+			#visible = no
 			datamodel = "[UnitMapIcon.GetUnitItems]"
 
 			item = {
