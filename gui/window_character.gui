@@ -1358,6 +1358,7 @@ window = {
 								name = "realm_shield"
 								tooltip = "[Character.GetDefaultRealmFlagTooltipPrimaryTitleClickInfo]"
 								onclick = "[DefaultOnCoatOfArmsClick(Character.GetPrimaryTitle.GetID)]"
+								tooltip_enabled = no
 							}
 						}
 
