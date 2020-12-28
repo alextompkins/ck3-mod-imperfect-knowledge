@@ -331,6 +331,7 @@ types CharacterInteraction
 						}
 
 						strength_balance = {
+							visible = no
 							datacontext = "[AllianceInfo.GetMilitaryInfo]"
 							blockoverride "StrengthBalanceAllies" {}
 						}
