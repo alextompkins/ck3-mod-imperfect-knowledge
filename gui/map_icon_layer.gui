@@ -299,7 +299,7 @@ container = {
 	allow_outside = yes
 
 	widget_unit_icon_item = {
-		position = { -65 10 }
+		position = { -93 10 }
 
 		alpha = 1
 	}
@@ -338,8 +338,11 @@ widget = {
 
 	icon = {
 		name = "ford_icon"
-		texture = "gfx/interface/icons/map_icons/ford.dds"
 		visible = "[StraitMapIcon.ShouldBeShown]"
+		using = Animation_ShowHide_Quick
+
+		size = { 40 40 }
+		texture = "gfx/interface/icons/map_icons/ford.dds"
 	}
 }
 
@@ -354,6 +357,8 @@ widget = {
 	icon = {
 		name = "strait_icon"
 		texture = "gfx/interface/icons/map_icons/strait.dds"
+		using = Animation_ShowHide_Quick
+		size = { 40 40 }
 		visible = "[StraitMapIcon.ShouldBeShown]"
 	}
 }
