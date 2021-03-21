@@ -1155,9 +1155,9 @@ window = {
 					texture = "gfx/interface/window_war/tile_frame_top_war.dds"
 					spriteType = Corneredtiled
 					spriteborder = { 100 0 }
-					size = { 728 22 }
+					size = { 724 22 }
 					parentanchor = top|hcenter
-					position = { 2 -14 }
+					position = { -1 -14 }
 				}
 
 				icon = {
@@ -1273,7 +1273,6 @@ window = {
 									max_width = 500
 								}
 
-
 								hbox = {
 									layoutpolicy_horizontal = expanding
 									layoutstretchfactor_horizontal = 1
@@ -1284,6 +1283,9 @@ window = {
 										blockoverride "button_close"
 										{
 											onclick = "[WarOverviewWindow.Close]"
+											onclick = "[PdxGuiTriggerAllAnimations('ally_list_hide')]"
+											onclick = "[GetVariableSystem.Clear( 'characterlist_left' )]"
+											onclick = "[GetVariableSystem.Clear( 'characterlist_right' )]"
 										}
 									}
 								}
@@ -2291,6 +2293,13 @@ window = {
 			position_y = 50
 		}
 
+		state = {
+			name = "ally_list_hide"
+			using = Animation_FadeOut_Quick
+			on_start = "[GetVariableSystem.Clear( 'list_left_open' )]"
+			position_y = 50
+		}
+		
 		vbox = {
 			layoutpolicy_horizontal = expanding
 			margin = { 4 4 }
@@ -2396,6 +2405,13 @@ window = {
 
 		state = {
 			name = _hide
+			using = Animation_FadeOut_Quick
+			on_start = "[GetVariableSystem.Clear( 'list_right_open' )]"
+			position_y = 50
+		}
+
+		state = {
+			name = "ally_list_hide"
 			using = Animation_FadeOut_Quick
 			on_start = "[GetVariableSystem.Clear( 'list_right_open' )]"
 			position_y = 50
@@ -2581,7 +2597,7 @@ template Background_WarOverview_3
 		spriteType = Corneredtiled
 		spriteborder = { 5 5 }
 		color = { 1.77 1.77 1.80 1 }
-        texture_density = 2
+		texture_density = 2
 
 		margin_top = -120
 		alpha = 0.5
