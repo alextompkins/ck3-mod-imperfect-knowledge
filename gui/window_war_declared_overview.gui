@@ -10,7 +10,7 @@ window = {
 	layer = windows_layer
 
 	using = Window_Background
-	using = Window_Decoration_Spike
+	using = Window_Decoration_Warfare
 
 	state = {
 		name = _show

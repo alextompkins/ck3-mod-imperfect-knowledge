@@ -237,21 +237,30 @@ types MapIcons {
 		datacontext = "[UnitItem.GetArmy]"
 		visible = "[Not(Or(UnitItem.IsUnitItemEnemy, UnitItem.IsUnitItemHostile))]"
 
+		state = {
+			name = _mouse_hierarchy_enter
+			on_start = "[Army.OnMouseEnter]"
+		}
+		state = {
+			name = _mouse_hierarchy_leave
+			on_start = "[Army.OnMouseLeave]"
+		}
+
 		block "siege_window"
 		{
 			container_unit_effect_icons = {
-				position = { 30 25 }
+				position = { 58 25 }
 			}
 		}
 
 		block "siege_window"
 		{
-			container_supply_icon = {
-				position = { -28 0 }
-			}
+			container_supply_icon = {}
 		}
 
 		button_group = {
+			position = { 28 0 }
+			
 			block "onclick" {
 				onclick = "[UnitMapIcon.OnClickArmyGroup( Army.Self )]"
 			}
@@ -411,11 +420,11 @@ types MapIcons {
 					size = { 30 30 }
 
 					parentanchor = center
-					position = { 3 -18 }
+					position = { 30 -18 }
 				}
 
 				coa_realm_tiny = {
-					position = { 0 -3 }
+					position = { 28 -3 }
 					datacontext = "[UnitItem.GetOwner]"
 					visible = "[Not(UnitItem.IsUnitItemMine)]"
 				}
@@ -585,6 +594,7 @@ types MapIcons {
 
 		flowcontainer = {
 			margin_top = 7
+			margin_left = -2
 
 			progressbar_standard = {
 				name = "gathering_progress"

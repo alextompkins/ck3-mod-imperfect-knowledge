@@ -146,31 +146,154 @@ window = {
 
 				hbox = {
 					
-					background = {
-						texture = "gfx/interface/window_war_ghw/effect_glow_ghw.dds"
-						color = { 0.88 0.80 0.7 1 }
-						fittype = centercrop
+					widget = {
+						name = "holy_glow"
+						icon = {
+							parentanchor = left
+							position = { -24 0 }
+							size = { 600 260 }
 
-						modify_texture = {
-							name = "shimmer"
-							texture = "gfx/interface/component_masks/mask_clouds.dds"
-							blend_mode = alphamultiply
-							spriteType = corneredTiled
-							alpha = 0.5
-						}
+							texture = "gfx/interface/window_war_ghw/effect_glow_ghw.dds"
+							color = { 0.88 0.80 0.7 1 }
+							
+							modify_texture = {
+								name = "shimmer"
+								texture = "gfx/interface/component_masks/mask_clouds.dds"
+								blend_mode = alphamultiply
+								spriteType = corneredTiled
+								alpha = 0.5
+							}
 
-						modify_texture = {
-							texture = "gfx/interface/component_masks/mask_clouds.dds"
-							blend_mode = alphamultiply
-							spriteType = corneredTiled
-							alpha = 0.5
-						}
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_clouds.dds"
+								blend_mode = alphamultiply
+								spriteType = corneredTiled
+								alpha = 0.5
+							}
 
-						modify_texture = {
-							texture = "gfx/interface/component_masks/mask_fade_horizontal_middle.dds"
-							blend_mode = alphamultiply
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_fade_horizontal_middle.dds"
+								blend_mode = alphamultiply
+							}
+
+							modify_texture = {
+								name = "shimmer"
+								texture = "gfx/interface/component_masks/mask_clouds_solid.dds"
+								blend_mode = colordodge
+								spriteType = corneredTiled
+								rotate_uv = 0
+							}
+
+							modify_texture = {
+								name = "shimmer_2"
+								texture = "gfx/interface/component_masks/mask_clouds_solid.dds"
+								blend_mode = colordodge
+								spriteType = corneredTiled
+								rotate_uv = 0
+							}
+
+							state = {
+								trigger_on_create = yes
+								name = a
+								next = b
+								duration = 0
+
+								modify_texture = {
+									name = "shimmer"
+									translate_uv = { -0.1 0 }
+									alpha = 0.1
+									rotate_uv = 0
+								}
+
+								modify_texture = {
+									name = "shimmer_2"
+									translate_uv = { 1 0 }
+									alpha = 0.1
+									rotate_uv = 0
+								}
+							}
+
+							state = {
+								name = b
+								next = c
+								duration = 10
+
+								modify_texture = {
+									name = "shimmer"
+									translate_uv = { 0.1 0 }
+									alpha = 0.3
+									rotate_uv = -180
+								}
+
+								modify_texture = {
+									name = "shimmer_2"
+									translate_uv = { 0 0 }
+									alpha = 0.5
+									rotate_uv = -180
+								}
+							}
+
+							state = {
+								name = c
+								next = d
+								duration = 10
+
+								modify_texture = {
+									name = "shimmer"
+									translate_uv = { -0.1 0 }
+									alpha = 0.1
+									rotate_uv = -360
+								}
+
+								modify_texture = {
+									name = "shimmer_2"
+									translate_uv = { -1 0 }
+									alpha = 0.1
+									rotate_uv = -360
+								}
+							}
+
+							state = {
+								name = d
+								next = e
+								duration = 1.5
+
+								modify_texture = {
+									name = "shimmer"
+									translate_uv = { -0.1 0 }
+									alpha = 0
+									rotate_uv = -360
+								}
+
+								modify_texture = {
+									name = "shimmer_2"
+									translate_uv = { -1 0 }
+									alpha = 0.1
+									rotate_uv = -360
+								}
+							}
+							
+							state = {
+								name = e
+								next = a
+								duration = 0
+
+								modify_texture = {
+									name = "shimmer"
+									translate_uv = { -0.1 0 }
+									alpha = 0
+									rotate_uv = 0
+								}
+
+								modify_texture = {
+									name = "shimmer_2"
+									translate_uv = { -1 0 }
+									alpha = 0.1
+									rotate_uv = 0
+								}
+							}
 						}
-					}
+					}	
 
 					vbox = {
 						layoutpolicy_vertical = expanding
@@ -1578,7 +1701,7 @@ window = {
 
 			parentanchor = top|hcenter
 			widgetanchor = bottom|hcenter
-			texture = "gfx/interface/window_war_ghw/tile_frame_top_ghw_2.dds"
+			texture = "gfx/interface/window_war/tile_frame_top_ghw_2.dds"
 
 			modify_texture = {
 				texture = "gfx/interface/component_overlay/overlay_effect.dds"
