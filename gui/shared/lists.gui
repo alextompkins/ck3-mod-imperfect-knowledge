@@ -492,11 +492,13 @@ types Lists
 
 							vbox = {
 								layoutpolicy_horizontal = expanding
+								layoutpolicy_vertical = expanding
 
 								block "additional_info_kill_list" {}
 
 								hbox = {
 									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
 
 									# Dynasty
 									widget = {
@@ -521,48 +523,53 @@ types Lists
 											margin = { 0 2 }
 										}
 
-										fixedgridbox = {
-											name = "traits_grid"
-											datamodel = "[CharacterListItem.GetTraits]"
-											datamodel_reuse_widgets = yes
-											flipdirection = yes
+										hbox = {
 											layoutpolicy_horizontal = expanding
-											layoutpolicy_vertical = expanding
-											addcolumn = 30
-											addrow = 28
 
-											block "gridbox_items"
-											{
-												datamodel_wrap = 4
-												maxverticalslots = 2
-											}
+											fixedgridbox = {
+												name = "traits_grid"
+												datamodel = "[CharacterListItem.GetTraits]"
+												datamodel_reuse_widgets = yes
+												flipdirection = yes
+												layoutpolicy_horizontal = expanding
+												layoutpolicy_vertical = expanding
+												addcolumn = 30
+												addrow = 28
 
-											item = {
-												icon_trait = {
-													visible = "[Trait.IsValid]"
+												block "gridbox_items"
+												{
+													datamodel_wrap = 4
+													maxverticalslots = 2
+												}
 
-													blockoverride "icon_size"
-													{
-														size = { 30 30 }
-													}
+												item = {
+													icon_trait = {
+														visible = "[Trait.IsValid]"
 
-													blockoverride "tooltip_placement"
-													{
-														using = tooltip_se
-													}
+														blockoverride "icon_size"
+														{
+															size = { 30 30 }
+														}
 
-													blockoverride "glow_radius"
-													{
-														glow_radius = 3
+														blockoverride "tooltip_placement"
+														{
+															using = tooltip_se
+														}
+
+														blockoverride "glow_radius"
+														{
+															glow_radius = 3
+														}
 													}
 												}
 											}
+
+											expand = {}
 										}
 									}
 
 									expand = {}
 								}
-
 							}
 
 							vbox = {
@@ -942,6 +949,11 @@ types Lists
 				texture = "gfx/interface/icons/flat_icons/sort_icon.dds"
 				framesize = { 66 66 }
 				frame = "[BoolTo1And2(CharacterSelectionList.GetSortOrder)]"
+
+				blockoverride "button_frames"
+				{
+					effectname = "NoHighlight"
+				}
 			}
 		}
 
@@ -1287,79 +1299,82 @@ types Lists
 							layoutpolicy_vertical = expanding
 							margin = { 10 0 }
 
-							fixedgridbox = {
-								name = "traits_grid_5"
-								datamodel = "[CharacterListItem.GetTraits]"
-								visible = "[Not( IsDataModelEmpty( CharacterListItem.GetTitleItems ) )]"
-								flipdirection = yes
-								addcolumn = 30
-								addrow = 28
+							hbox = {
+								layoutpolicy_horizontal = expanding
 
-								block "gridbox_items"
-								{
-									datamodel_wrap = 5
-									maxverticalslots = 2
-								}
+								fixedgridbox = {
+									name = "traits_grid_four"
+									datamodel = "[CharacterListItem.GetTraits]"
+									flipdirection = yes
+									addcolumn = 30
+									addrow = 28
+									visible = "[Not( IsDataModelEmpty( CharacterListItem.GetTitleItems ) )]"
 
-								item = {
-									icon_trait = {
-										visible = "[Trait.IsValid]"
+									block "gridbox_items"   ### for characterview
+									{
+										datamodel_wrap = 4
+										maxverticalslots = 2
+									}
 
-										blockoverride "icon_size"
-										{
-											size = { 30 30 }
-										}
+									item = {
+										icon_trait = {
+											visible = "[Trait.IsValid]"
 
-										blockoverride "tooltip_placement"
-										{
-											using = tooltip_se
-										}
+											blockoverride "icon_size"
+											{
+												size = { 30 30 }
+											}
 
-										blockoverride "glow_radius"
-										{
-											glow_radius = 3
+											blockoverride "tooltip_placement"
+											{
+												using = tooltip_se
+											}
+
+											blockoverride "glow_radius"
+											{
+												glow_radius = 3
+											}
 										}
 									}
 								}
-							}
+																fixedgridbox = {
+									name = "traits_grid_five"
+									datamodel = "[CharacterListItem.GetTraits]"
+									flipdirection = yes
+									addcolumn = 30
+									addrow = 28
+									visible = "[IsDataModelEmpty( CharacterListItem.GetTitleItems )]"
 
-							fixedgridbox = {
-								name = "traits_grid_7"
-								datamodel = "[CharacterListItem.GetTraits]"
-								visible = "[IsDataModelEmpty( CharacterListItem.GetTitleItems )]"
-								flipdirection = yes
-								addcolumn = 30
-								addrow = 28
+									block "gridbox_items"   ### for characterview
+									{
+										datamodel_wrap = 5
+										maxverticalslots = 2
+									}
 
-								block "gridbox_items"
-								{
-									datamodel_wrap = 7
-									maxverticalslots = 2
-								}
+									item = {
+										icon_trait = {
+											visible = "[Trait.IsValid]"
 
-								item = {
-									icon_trait = {
-										visible = "[Trait.IsValid]"
+											blockoverride "icon_size"
+											{
+												size = { 30 30 }
+											}
 
-										blockoverride "icon_size"
-										{
-											size = { 30 30 }
-										}
+											blockoverride "tooltip_placement"
+											{
+												using = tooltip_se
+											}
 
-										blockoverride "tooltip_placement"
-										{
-											using = tooltip_se
-										}
-
-										blockoverride "glow_radius"
-										{
-											glow_radius = 3
+											blockoverride "glow_radius"
+											{
+												glow_radius = 3
+											}
 										}
 									}
 								}
-							}
 
-							expand = {}
+								expand = {}
+							}
 						}
 
 						expand = {}
@@ -1384,10 +1399,34 @@ types Lists
 						}
 
 						hbox = {
-							margin = { 5 0 }
+							margin_right = 5
+							
 							button_religion_icon = {
 								datacontext = "[Character.GetFaith]"
 								size = { 40 40 }
+							}
+
+							vbox = {
+								datacontext = "[Character.GetCulture]"
+
+								tooltipwidget = {
+									culture_tooltip = {}
+								}
+								using = tooltip_se
+
+								icon = {
+									name = "culture"
+									texture = "gfx/interface/icons/icon_culture.dds"
+									size = { 24 24 }
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									min_width = 60
+									align = center|nobaseline
+									autoresize = no
+									text = "CULTURE_LISTS_WINDOW"
+								}
 							}
 						}
 					}
@@ -1459,38 +1498,6 @@ types Lists
 								fontsize_min = 13
 								align = nobaseline
 							}
-
-							hbox = {
-								layoutpolicy_horizontal = expanding
-								spacing = 3
-								visible = "[Not(Character.GetLiege.IsLocalPlayer)]"
-								tooltipwidget = character_opinion_tooltip
-								blockoverride "ott_heading_text"
-								{
-									text = "[Character.GetOpinionHeadingText( Character.GetLiege )]"
-								}
-
-								blockoverride "ott_opinion_value_text"
-								{
-									text = "[Character.GetOpinionOf( Character.GetLiege )|=]"
-									fonttintcolor = "[Character.GetOpinionOfTint( Character.GetLiege )]"
-								}
-
-								blockoverride "ott_opinion_breakdown_text"
-								{
-									text = "[Character.GetOpinionBreakdownText( Character.GetLiege )]"
-								}
-
-								text_single = {
-									text = "CHARACTER_WINDOW_OPINION_OF_LIEGE"
-								}
-
-								text_single = {
-									layoutpolicy_horizontal = expanding
-									text = "[Character.GetOpinionOf( Character.GetLiege )|=]"
-									fonttintcolor = "[Character.GetOpinionOfTint( Character.GetLiege )]"
-								}
-							}
 						}
 
 						block "own_vassal" {
@@ -1536,10 +1543,8 @@ types Lists
 											}
 										}
 										expand = {}
-
 									}
 								}
-
 								expand = {}
 							}
 						}
@@ -1555,6 +1560,8 @@ types Lists
 							text = "REALM_WINDOW_SIZE"
 							tooltip = "REALM_WINDOW_SIZE_TT"
 							align = nobaseline
+							visible = "[NotEqualTo_int32(Character.GetPrimaryTitle.GetTierFrame, '(int32)2')]" #nonbaron
+
 						}
 
 						hbox = {
@@ -1615,7 +1622,6 @@ types Lists
 							layoutpolicy_horizontal = expanding
 							visible = "[And( VassalContract.UsesObligationLevels, Not( Character.GetPrimaryTitle.IsBarony))]"
 							spacing = 10
-
 
 							button_round = {
 								enabled = "[Character.IsPlayerInteractionValid('liege_modify_vassal_contract_interaction')]"
