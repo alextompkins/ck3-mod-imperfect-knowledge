@@ -7,7 +7,7 @@ window = {
 	parentanchor = hcenter
 	size = { 615 550 }
 	resizable = no
-	layer = windows_layer
+	layer = middle
 
 	using = Window_Background
 	using = Window_Decoration_Warfare

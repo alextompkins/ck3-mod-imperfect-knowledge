@@ -4,8 +4,7 @@ window = {
 	datacontext = "[GreatHolyWarWindow.GetGreatHolyWar]"
 	datacontext = "[GetVariableSystem]"
 	size = { 680 890 }
-
-	layer = windows_layer
+	layer = middle
 
 	background = {
 		texture = "gfx/interface/window_war_ghw/tile_bg_shield.dds"
