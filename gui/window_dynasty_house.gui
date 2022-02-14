@@ -498,7 +498,6 @@ window = {
 								margin_left = 25
 
 								text_multi = {
-									layoutpolicy_horizontal = expanding
 									visible = "[EqualTo_int32(Character.GetDynasty.GetFoundedDynastyHousesCount, '(int32)1')]"
 									text = "DYNASTY_VIEW_BECOME_DYNAST_ONE_HOUSE"
 									default_format = "#weak"
@@ -574,7 +573,7 @@ window = {
 						}
 					}
 
-					vbox = {
+					hbox = {
 						layoutpolicy_horizontal = expanding
 						margin_top = 5
 
@@ -1040,9 +1039,9 @@ window = {
 														visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)1')]"
 													}
 
-											legacy_progress = {
-												visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)2')]"
-											}
+													legacy_progress = {
+														visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)2')]"
+													}
 
 													legacy_progress = {
 														visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)3')]"
@@ -1052,8 +1051,10 @@ window = {
 														visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)4')]"
 													}
 
-											legacy_progress = {
-												visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)5')]"
+													legacy_progress = {
+														visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)5')]"
+													}
+												}
 											}
 										}
 									}
@@ -1089,12 +1090,12 @@ window = {
 													spacing = 2
 													parentanchor = center
 
-											legacy_progress_none = {}
-											legacy_progress_none = {}
-											legacy_progress_none = {}
-											legacy_progress_none = {}
-											legacy_progress_none = {}
-										}
+													legacy_progress_none = {}
+													legacy_progress_none = {}
+													legacy_progress_none = {}
+													legacy_progress_none = {}
+													legacy_progress_none = {}
+												}
 
 												flowcontainer = {
 													name = "progress"
@@ -1105,9 +1106,9 @@ window = {
 														visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)1')]"
 													}
 
-											legacy_progress = {
-												visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)2')]"
-											}
+													legacy_progress = {
+														visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)2')]"
+													}
 
 													legacy_progress = {
 														visible = "[GreaterThanOrEqualTo_int32(DynastyLegacyItem.GetUnlockedPerksCount, '(int32)3')]"
