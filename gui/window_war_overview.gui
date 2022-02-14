@@ -440,7 +440,7 @@ window = {
 							}
 
 							vbox = {
-								visible = "0"
+								visible = no
 								layoutpolicy_horizontal = expanding
 								margin = { 5 0 }
 
@@ -786,7 +786,7 @@ window = {
 							}
 
 							hbox = {
-								visible = "0"
+								visible = no
 								layoutpolicy_horizontal = expanding
 
 								background = {
@@ -794,7 +794,7 @@ window = {
 								}
 
 								widget = {
-									#visible = "0"
+									#visible = no
 									size = { 55 60 }
 
 									icon = {
@@ -1116,7 +1116,7 @@ window = {
 				spriteborder = { 100 0 }
 				size = { 724 35 }
 				parentanchor = top|hcenter
-				position = { 0 50 }
+				position = { 0 54 }
 			}
 
 			background = {
@@ -1155,7 +1155,7 @@ window = {
 					texture = "gfx/interface/window_war/tile_frame_top_war.dds"
 					spriteType = Corneredtiled
 					spriteborder = { 100 0 }
-					size = { 724 22 }
+					size = { 754 22 }
 					parentanchor = top|hcenter
 					position = { -1 -14 }
 				}
@@ -1237,6 +1237,7 @@ window = {
 				vbox = {
 					set_parent_size_to_minimum = yes
 					minimumsize = { 620 0 }
+					maximumsize = { 620 0 }
 					margin = { 10 0 }
 
 					vbox = {
@@ -1258,6 +1259,7 @@ window = {
 
 							hbox = {
 								layoutpolicy_horizontal = expanding
+								maximumsize = { 600 0 }
 
 								expand = {
 									layoutpolicy_horizontal = expanding
@@ -1269,7 +1271,7 @@ window = {
 									using = Font_Type_Flavor
 									using = Font_Size_Big
 									default_format = "#high"
-									align = nobaseline
+									align = center|nobaseline
 									max_width = 500
 								}
 
@@ -1461,7 +1463,7 @@ window = {
 									text_single = {
 										name = "max_warscore"
 										align = right|nobaseline
-										text = "-100"
+										raw_text = "-100"
 										using = Font_Size_Medium
 										default_format = "#low"
 									}
@@ -1655,7 +1657,7 @@ window = {
 																parentanchor = right
 																size = { 160 100% }
 																texture = "gfx/interface/colors/white.dds"
-																shaderfile = "gfx/FX/repeat_texture.shader"
+																shaderfile = "gfx/FX/pdxgui_repeat_texture.shader"
 																alpha = 0.4
 
 																using = Color_Bright_Yellow
@@ -1826,7 +1828,7 @@ window = {
 
 																size = { 160 100% }
 																texture = "gfx/interface/colors/white.dds"
-																shaderfile = "gfx/FX/repeat_texture.shader"
+																shaderfile = "gfx/FX/pdxgui_repeat_texture.shader"
 																alpha = 0.4
 
 																using = Color_Bright_Yellow
@@ -1890,7 +1892,7 @@ window = {
 									text_single = {
 										name = "min_warscore"
 										align = nobaseline
-										text = "+100"
+										raw_text = "+100"
 										using = Font_Size_Medium
 										default_format = "#low"
 									}
@@ -2080,7 +2082,7 @@ window = {
 												autoresize = yes
 												maximumsize = { 520 -1 }
 												minimumsize = { 520 -1 }
-												text = " "
+												raw_text = " "
 												multiline = yes
 											}
 
@@ -2136,6 +2138,11 @@ window = {
 									onclick = "[WarOverviewWindow.Send]"
 									clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_advance"
 									tooltip = "[WarOverviewWindow.GetSendButtonTooltip]"
+
+									animation_aggressive = {
+										name = "vicotry_glow"
+										visible = "[WarOverviewWindow.CanSendVictoryDemand]"
+									}
 								}
 							}
 						}
@@ -2201,13 +2208,6 @@ window = {
 							onclick = "[PdxGuiTriggerAllAnimations('war_end_terms_refresh')]"
 							onclick = "[WarOverviewWindow.SetEffectsTabVictory]"
 							down = "[WarOverviewWindow.IsEffectsTabVictory]"
-
-							# animation_aggressive = {
-							# 	name = "vicotry_glow"
-							# 	layoutpolicy_horizontal = expanding
-							# 	minimumsize = { 0 40 }
-							# 	visible = "[WarOverviewWindow.CanSendVictoryDemand]"
-							# }
 
 							war_victory = {
 								alwaystransparent = yes
@@ -2301,7 +2301,6 @@ window = {
 		}
 		
 		vbox = {
-			layoutpolicy_horizontal = expanding
 			margin = { 4 4 }
 
 			header_pattern = {
@@ -2418,7 +2417,6 @@ window = {
 		}
 
 		vbox = {
-			layoutpolicy_horizontal = expanding
 			margin = { 4 4 }
 
 			header_pattern = {
