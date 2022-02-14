@@ -7,9 +7,9 @@ window = {
 	widgetanchor = top
 	size = { 580 90% }
 	resizable = no
-	movable = yes
 	layer = middle
 
+	using = Window_Movable
 	using = title_view_window_side_pop_out
 	using = Window_Decoration
 	using = Window_Background
@@ -86,7 +86,6 @@ window = {
 
 								vbox = {
 									datacontext = "[GuiClaimant.GetCharacter]"
-									layoutpolicy_horizontal = expanding
 
 									background = {
 										using = Background_Area_With_Header
