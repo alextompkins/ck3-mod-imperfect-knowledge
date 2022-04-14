@@ -440,7 +440,7 @@ window = {
 							}
 
 							vbox = {
-								visible = no
+								visible = no # HIDE_LIVIES MOD
 								layoutpolicy_horizontal = expanding
 								margin = { 5 0 }
 
@@ -520,7 +520,7 @@ window = {
 
 										blockoverride "portrait_button_template_tooltip"
 										{
-											#tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+											#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LIVIES MOD
 										}
 
 									}
@@ -631,7 +631,7 @@ window = {
 
 									blockoverride "portrait_button_template_tooltip"
 									{
-										#tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LIVIES MOD
 									}
 
 
@@ -786,7 +786,7 @@ window = {
 							}
 
 							hbox = {
-								visible = no
+								visible = no # HIDE_LIVIES MOD
 								layoutpolicy_horizontal = expanding
 
 								background = {
@@ -794,7 +794,7 @@ window = {
 								}
 
 								widget = {
-									#visible = no
+									#visible = no # HIDE_LIVIES MOD
 									size = { 55 60 }
 
 									icon = {
@@ -1188,9 +1188,10 @@ window = {
 					margin = { 0 10 }
 
 					modify_texture = {
-						texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+						texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
 						blend_mode = alphamultiply
-						rotate_uv = -180
+						rotate_uv = 180
+						mirror = horizontal
 					}
 				}
 
@@ -1199,11 +1200,11 @@ window = {
 					spriteType = Corneredtiled
 					spriteborder = { 20 20 }
 					margin = { 3 10 }
-					mirror = horizontal
 
 					modify_texture = {
-						texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+						texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
 						blend_mode = alphamultiply
+						mirror = horizontal
 					}
 				}
 
@@ -1213,12 +1214,12 @@ window = {
 					spriteType = Corneredtiled
 					spriteborder = { 20 20 }
 					margin = { 0 10 }
-					mirror = horizontal
 
 					modify_texture = {
-						texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+						texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
 						blend_mode = alphamultiply
-						rotate_uv = -180
+						rotate_uv = 180
+						mirror = horizontal
 					}
 				}
 
@@ -1229,8 +1230,9 @@ window = {
 					margin = { 3 10 }
 
 					modify_texture = {
-						texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+						texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
 						blend_mode = alphamultiply
+						mirror = horizontal
 					}
 				}
 
@@ -2339,7 +2341,7 @@ window = {
 									blockoverride "opinion_box" {}
 									blockoverride "portrait_button_template_tooltip"
 									{
-										#tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LIVIES MOD
 									}
 								}
 
@@ -2364,7 +2366,7 @@ window = {
 										layoutpolicy_vertical = growing
 
 										soldiers_and_quality_small = {
-											visible = no
+											visible = no # HIDE_LIVIES MOD
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}
 
@@ -2453,7 +2455,7 @@ window = {
 									blockoverride "opinion_box" {}
 									blockoverride "portrait_button_template_tooltip"
 									{
-										#tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LIVIES MOD
 									}
 								}
 
@@ -2478,7 +2480,7 @@ window = {
 										layoutpolicy_vertical = growing
 
 										soldiers_and_quality_small = {
-											visible = no
+											visible = no # HIDE_LIVIES MOD
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}
 

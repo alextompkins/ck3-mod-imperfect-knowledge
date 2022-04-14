@@ -317,8 +317,9 @@ window = {
 
 
 							modify_texture = {
-								texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+								texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
 								blend_mode = alphamultiply
+								mirror = horizontal
 							}
 						}
 
@@ -999,8 +1000,9 @@ window = {
 									using = Mask_Rough_Edges
 
 									modify_texture = {
-										texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+										texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
 										blend_mode = alphamultiply
+										mirror = horizontal
 									}
 								}
 
@@ -1530,7 +1532,7 @@ window = {
 										}
 
 										text_single = {
-											visible = no
+											visible = no # HIDE_LIVIES MOD
 											text = "GHW_MILITARY_STRENGTH"
 											layoutpolicy_horizontal = expanding
 										}
@@ -1539,7 +1541,7 @@ window = {
 											layoutpolicy_horizontal = expanding
 
 											soldiers_and_quality_small = {
-												visible = no
+												visible = no # HIDE_LIVIES MOD
 												datacontext = "[GreatHolyWarWindow.GetArmyComposition( Character.Self )]"
 											}
 											expand = {}
@@ -1640,7 +1642,7 @@ window = {
 										}
 
 										text_single = {
-											visible = no
+											visible = no # HIDE_LIVIES MOD
 											text = "GHW_MILITARY_STRENGTH"
 											layoutpolicy_horizontal = expanding
 										}
@@ -1649,7 +1651,7 @@ window = {
 											layoutpolicy_horizontal = expanding
 
 											soldiers_and_quality_small = {
-												visible = no
+												visible = no # HIDE_LIVIES MOD
 												datacontext = "[GreatHolyWarWindow.GetArmyComposition( Character.Self )]"
 											}
 											expand = {}
