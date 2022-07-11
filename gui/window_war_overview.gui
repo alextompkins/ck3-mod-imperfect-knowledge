@@ -520,6 +520,7 @@ window = {
 
 										blockoverride "portrait_button_template_tooltip"
 										{
+											# HIDE_LIVIES:
 											#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LIVIES MOD
 										}
 
@@ -631,6 +632,7 @@ window = {
 
 									blockoverride "portrait_button_template_tooltip"
 									{
+										# HIDE_LIVIES:
 										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LIVIES MOD
 									}
 
@@ -2341,6 +2343,7 @@ window = {
 									blockoverride "opinion_box" {}
 									blockoverride "portrait_button_template_tooltip"
 									{
+										# HIDE_LIVIES:
 										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LIVIES MOD
 									}
 								}

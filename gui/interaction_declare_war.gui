@@ -102,7 +102,7 @@ window = {
 
 					vbox = {
 						datacontext = "[DeclareWarInteractionWindow.GetMilitaryStrengthInfo]"
-						visible = no
+						visible = no # HIDE_LIVIES
 
 						
 						
@@ -755,7 +755,7 @@ window = {
 
 									hbox = {
 										layoutpolicy_horizontal = expanding
-										visible = no
+										visible = no # HIDE_LIVIES
 
 										text_single = {
 											name = "ally_military_strength_text"
@@ -1019,7 +1019,7 @@ types CharacterInteractionDeclareWar
 					name = "view_allies"
 					enabled = "[GreaterThan_int32( CharacterItem.GetAllyCount, '(int32)0' )]"
 					size = { 120 30 }
-					onclick = "[CharacterItem.ShowAllyList]"
+					onclick = "[DeclareWarInteractionWindow.ShowAlliesForCharacter( CharacterItem.Self )]"
 					text = "DECLARE_WAR_ALLY_COUNT"
 				}
 			}
