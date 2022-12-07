@@ -5,5 +5,5 @@ tags={
 }
 name="Hide levies"
 picture="thumbnail.png"
-supported_version="1.7.2"
+supported_version="1.8.0"
 remote_file_id="2336223087"
