@@ -143,7 +143,7 @@ window = {
 				}
 
 				hbox = {
-					
+
 					widget = {
 						name = "holy_glow"
 						icon = {
@@ -153,7 +153,7 @@ window = {
 
 							texture = "gfx/interface/window_war_ghw/effect_glow_ghw.dds"
 							color = { 0.88 0.80 0.7 1 }
-							
+
 							modify_texture = {
 								name = "shimmer"
 								texture = "gfx/interface/component_masks/mask_clouds.dds"
@@ -270,7 +270,7 @@ window = {
 									rotate_uv = -360
 								}
 							}
-							
+
 							state = {
 								name = e
 								next = a
@@ -291,7 +291,7 @@ window = {
 								}
 							}
 						}
-					}	
+					}
 
 					vbox = {
 						layoutpolicy_vertical = expanding
@@ -299,7 +299,7 @@ window = {
 						margin_top = 10
 
 						background = {
-							texture = "[Illustration.GetTexture( Character.Self )]"
+							texture = "[Illustration.GetTexture( Character.MakeScope )]"
 							fittype = centercrop
 							margin = { 45 5 }
 							margin_left = 25
@@ -402,7 +402,7 @@ window = {
 						margin_top = 10
 
 						background = {
-							texture = "[Illustration.GetTexture( Character.Self )]"
+							texture = "[Illustration.GetTexture( Character.MakeScope )]"
 							fittype = centercrop
 							margin = { 45 5 }
 							margin_right = 25
@@ -1192,7 +1192,7 @@ window = {
 										name = "rank"
 										spacing = 1
 										minimumsize = { 0 25 }
-										visible = "[GreatHolyWar.IsPledgedAttacker( GetPlayer ))]"
+										visible = "[GreatHolyWar.IsPledgedAttacker( GetPlayer )]"
 
 										tooltip = "GHW_MY_RANK_TT"
 

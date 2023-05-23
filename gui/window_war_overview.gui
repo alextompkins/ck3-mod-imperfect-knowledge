@@ -2483,6 +2483,7 @@ window = {
 										layoutpolicy_vertical = growing
 
 										soldiers_and_quality_small = {
+											# HIDE_LIVIES MOD
 											visible = no # HIDE_LIVIES MOD
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}

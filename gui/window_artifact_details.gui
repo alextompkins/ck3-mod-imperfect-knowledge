@@ -209,6 +209,41 @@ window = {
 							expand = {}
 						}
 
+						hbox = {
+							visible = "[Artifact.GetOwner.IsPlayerInteractionWithTargetArtifactValid( 'destroy_artifact_interaction', Artifact.Self )]"
+							layoutpolicy_horizontal = expanding
+
+							hbox = {
+								spacing = 5
+
+								button_round = {
+									name = "destroy"
+									size = { 30 30 }
+
+									button_icon_highlight = {
+										parentanchor = center
+										size = { 20 20 }
+										texture = "gfx/interface/icons/flat_icons/clear.dds"
+									}
+
+									visible = "[Artifact.GetOwner.IsPlayerInteractionShown( 'destroy_artifact_interaction' )]"
+									enabled = "[Artifact.GetOwner.IsPlayerInteractionWithTargetArtifactValid( 'destroy_artifact_interaction', Artifact.Self )]"
+									onclick = "[Artifact.GetOwner.OpenPlayerInteractionWithTargetArtifact( 'destroy_artifact_interaction', Artifact.Self )]"
+									tooltip = "[Artifact.GetOwner.GetPlayerInteractionWithTargetArtifactTooltip( 'destroy_artifact_interaction', Artifact.Self )]"
+								}
+
+								text_single = {
+									text = "INVENTORY_DESTROY_ARTIFACT"
+									max_width = 200
+									align = nobaseline
+								}
+
+								expand = {}
+							}
+
+							expand = {}
+						}
+
 						vbox = {
 							spacing = 5
 							visible = "[And( Not( Artifact.GetOwner.IsLocalPlayer ), Artifact.HasClaim( GetPlayer ) )]"
