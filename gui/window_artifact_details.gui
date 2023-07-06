@@ -571,7 +571,7 @@ window = {
 												text_single = {
 													name = "character_name"
 													visible = "[ClaimantEntry.IsCharacter]"
-													text = "[ClaimantEntry.GetCharacter.GetUINameNoTooltip]"
+													text = "[ClaimantEntry.GetCharacter.GetUINameNoTooltip|U]"
 													max_width = 400
 												}
 
