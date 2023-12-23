@@ -167,8 +167,11 @@
  action_can_call_ally_combined_group_name: "@alliance_icon! Vous pouvez appeler des alliés à la guerre"
  action_can_call_ally_desc: "Vous pouvez appeler votre [ally|El][recipient.Custom('FR_E')|E] [recipient.Custom('FR_le_Char_U_P')][recipient.GetUIName] à rejoindre vos [wars|El].\n\n[recipient.Custom('FR_IlElle')|U] a [recipient.GetMilitaryStrengthText]@soldier_icon! [soldiers|El] qui pourraient vous aider dans vos [wars|El].$CALL_TO_WAR_HELP$"
  action_can_call_ally_combined_group_description: "Vous pouvez appeler vos [allies|El] à rejoindre vos [wars|El].$CALL_TO_WAR_HELP$"
- action_can_call_ally_label: "@alliance_icon! Vous pouvez appeler à la guerre votre allié[recipient.Custom('FR_E')] [recipient.Custom('FR_le_Char_U_Pi')][recipient.GetShortUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')], #low [recipient.GetMilitaryStrengthText]@soldier_icon!#!"
- action_can_call_ally_combined_label: "[recipient.GetUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')], #low [recipient.GetMilitaryStrengthText]@soldier_icon!#!"
+ # THE MOD:
+ action_can_call_ally_label: "@alliance_icon! Vous pouvez appeler à la guerre votre allié[recipient.Custom('FR_E')] [recipient.Custom('FR_le_Char_U_Pi')][recipient.GetShortUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]"
+ # THE MOD:
+ action_can_call_ally_combined_label: "[recipient.GetUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]!"
+ # --------------------------------------
  action_can_call_ally_click: "#I Cliquer pour appeler un allié à la guerre#!"
  CALL_TO_WAR_HELP: "\n\n#help Appeler d’autres [rulers|El] à rejoindre votre guerre implique qu’il est plus probable que vous gagniez, mais sachez que vous devez dépenser du [prestige|El] pour chaque [ally|El]. Appeler les membres de la [dynasty|El] coûte de la [dynasty_prestige|El], tandis que les membres de la [house|E] vous rejoindront gratuitement, à condition qu’ils acceptent votre appel.#!"
  action_has_any_display_cb_on: "@war_icon! Vous pouvez déclarer la [war|El] [recipient.Custom('FR_au_Char_U_Pi')][recipient.GetShortUINameNoTooltip]"

@@ -167,8 +167,11 @@
  action_can_call_ally_combined_group_name: "@alliance_icon! Вы можете призвать союзников"
  action_can_call_ally_desc: "Вы можете призвать [Concept( 'ally', 'союзника' )|E]: [recipient.GetUIName] присоединится к вашим [Concept( 'wars', 'войнам' )|E].\n\n[recipient.GetSheHe|U] может послать на войну @soldier_icon![recipient.GetMilitaryStrengthText] [Concept( 'soldiers', 'солдат' )|E], которые окажут помощь вашему войску.$CALL_TO_WAR_HELP$"
  action_can_call_ally_combined_group_description: "Вы можете призвать своих [Concept( 'allies', 'союзников' )|E] присоединиться к вашим [Concept( 'wars', 'войнам' )|E].$CALL_TO_WAR_HELP$"
- action_can_call_ally_label: "@alliance_icon! Вы можете призвать своего союзника: [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip], возможно, придет к вам на помощь (#low @soldier_icon![recipient.GetMilitaryStrengthText]#!)"
- action_can_call_ally_combined_label: "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#!"
+ # THE MOD:
+ action_can_call_ally_label: "@alliance_icon! Вы можете призвать своего союзника: [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip], возможно, придет к вам на помощь"
+ # THE MOD:
+ action_can_call_ally_combined_label: "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]!"
+ # ----------------------
  action_can_call_ally_click: "#I Нажмите, чтобы призвать союзника#!"
  CALL_TO_WAR_HELP: "\n\n#help Призыв на войну других [Concept( 'rulers', 'правителей' )|E] увеличивает ваш шанс на победу, но помните, что вам придется потратить [Concept( 'prestige', 'престиж' )|E] на призыв каждого из [Concept( 'allies', 'союзников' )|E]. На призыв членов [Concept( 'dynasty', 'династии' )|E] тратится [Concept( 'dynasty_prestige', 'признание' )|E], а членов своего [Concept( 'house', 'дома' )|E] можно призывать бесплатно, если только они ответят на призыв.#!"
  action_has_any_display_cb_on: "@war_icon! Вы можете объявить [Concept( 'war', 'войну' )|E] персонажу [recipient.GetShortUINameNoTooltip]"

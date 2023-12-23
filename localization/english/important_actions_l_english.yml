@@ -183,8 +183,11 @@
  action_can_call_ally_combined_group_name:2 "@alliance_icon! You can call Allies"
  action_can_call_ally_desc:3 "You can call your [ally|E] [recipient.GetUIName] to your [wars|E].\n\n[recipient.GetSheHe|U] has @soldier_icon![recipient.GetMilitaryStrengthText] [soldiers|E] that could help in your [wars|E].$CALL_TO_WAR_HELP$"
  action_can_call_ally_combined_group_description:2 "You can call your [allies|E] to your [wars|E].$CALL_TO_WAR_HELP$"
- action_can_call_ally_label:3 "@alliance_icon! You can call on your Ally [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#!"
- action_can_call_ally_combined_label:1 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#!"
+ # THE MOD:
+ action_can_call_ally_label:3 "@alliance_icon! You can call on your Ally [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]"
+ # THE MOD:
+ action_can_call_ally_combined_label:1 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]!"
+ # ----------------------------------------
  action_can_call_ally_click:0 "#I Click to call Ally#!"
  CALL_TO_WAR_HELP:1 "\n\n#help Calling other [rulers|E] into your War means it is more likely you win, but be aware that you must spend [prestige|E] for each [ally|E] that joins. Summoning [dynasty|E] Members costs [dynasty_prestige|E], while [house|E] members will join you for free — if they accept your call.#!"
 

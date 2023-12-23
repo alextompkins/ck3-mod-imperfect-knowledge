@@ -167,8 +167,11 @@
  action_can_call_ally_combined_group_name: "@alliance_icon! Ihr könnt Verbündete rufen"
  action_can_call_ally_desc: "Ihr könnt Euren [Concept('ally', 'Verbündeten')|E] [recipient.GetUIName] in Eure [wars|E] rufen.\n\n[recipient.Custom('DE_PRO_PER_S_3P_N')|U] hat @soldier_icon![recipient.GetMilitaryStrengthText] [soldiers|E], die in Euren [Concept('wars','Kriegen')|E] helfen könnten.$CALL_TO_WAR_HELP$"
  action_can_call_ally_combined_group_description: "Ihr könnt Eure [Concept('allies', 'Verbündeten')|E] in Eure [wars|E] rufen.$CALL_TO_WAR_HELP$"
- action_can_call_ally_label: "@alliance_icon! Ihr könnt Euren Verbündeten [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip] rufen, #low @soldier_icon![recipient.GetMilitaryStrengthText]#!"
- action_can_call_ally_combined_label: "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#!"
+ # THE MOD:
+ action_can_call_ally_label: "@alliance_icon! Ihr könnt Euren Verbündeten [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip] rufen"
+ # THE MOD:
+ action_can_call_ally_combined_label: "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]!"
+ # -------------------
  action_can_call_ally_click: "#I Klicken, um Verbündeten zu rufen#!"
  CALL_TO_WAR_HELP: "\n\n#help Andere [rulers|E] in Euren Krieg zu rufen, macht es wahrscheinlicher, dass Ihr gewinnt, aber denkt daran, dass Ihr [prestige|E] für jeden [Concept('ally', 'Verbündeten')|E] einsetzen müsst, der sich anschließt. Andere [dynasty|E]-Mitglieder zu rufen, kostet [dynasty_prestige|E], andere [house|E]-Mitglieder schließen sich kostenlos an – wenn Sie Euren Ruf annehmen.#!"
  action_has_any_display_cb_on: "@war_icon! Ihr könntet [recipient.GetShortUINameNoTooltip] den [war|E] erklären"
