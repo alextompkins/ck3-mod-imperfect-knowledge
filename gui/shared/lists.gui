@@ -1891,6 +1891,7 @@ types Lists
 										margin_left = 10
 										max_width = 250
 										align = nobaseline
+										alwaystransparent = yes
 
 										visible = "[Character.IsAssignedAsTaxpayer]"
 
@@ -1902,6 +1903,7 @@ types Lists
 										margin_left = 10
 										max_width = 250
 										align = nobaseline
+										alwaystransparent = yes
 
 										visible = "[Not( Character.IsAssignedAsTaxpayer )]"
 
