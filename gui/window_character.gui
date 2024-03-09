@@ -4,6 +4,7 @@
 
 window = {
 	name = "character_window"
+	widgetid = "character_window"
 	datacontext = "[GetVariableSystem]"
 	datacontext = "[CharacterWindow.GetCharacter]"
 	movable = no
@@ -86,7 +87,7 @@ window = {
 				}
 
 				blockoverride "button_pin" {}
-				
+
 				background = {
 					using = Background_Area_Solid
 					modify_texture = {
@@ -446,18 +447,6 @@ window = {
 					size = { 60 40 }
 					onclick = "[AddWatchWindow( CharacterWindow.GetCharacter.MakeScope )]"
 				}
-
-				button = {
-					using = editor_button
-					name = "copy_portrait_button"
-					parentanchor = right
-					size = { 60 40 }
-					raw_text = "portrait"
-					align = center|nobaseline
-					onclick = "[CharacterWindow.OnCopyPortrait]"
-					visible = "[IsGameViewOpen('portrait_editor')]"
-					fontcolor = { 1.0 1.0 1.0 1.0 }
-				}
 			}
 
 			flowcontainer = {
@@ -685,7 +674,7 @@ window = {
 							duration = 1.2
 							using = Animation_Curve_Default
 						}
-	
+
 						state = {
 							name = b
 							next = a
@@ -693,7 +682,7 @@ window = {
 							duration = 0.6
 							using = Animation_Curve_Default
 						}
-						
+
 						glow = {
 							glow_radius = 2
 							glow_generation_rules= {
@@ -704,7 +693,7 @@ window = {
 							}
 							using = Color_Orange
 						}
-					}		
+					}
 
 					highlight_icon_lifestyle_focus = {
 						size = { 100% 100% }
@@ -910,26 +899,28 @@ window = {
 							size = { 10 0 }
 						}
 
-						vbox = {
-							tooltip = "[CharacterWindow.GetCharacter.GetProwessBreakdown]"
-							using = tooltip_ne
-							spacing = -3
+						hbox = {
+							spacing = -5
+							vbox = {
+								tooltip = "[CharacterWindow.GetCharacter.GetProwessBreakdown]"
+								using = tooltip_ne
+								spacing = -3
 
-							using = Animation_Character_Window_Refresh
+								using = Animation_Character_Window_Refresh
 
-							icon = {
-								name = "prowess_icon"
-								size = { 32 32 }
-								texture = "gfx/interface/icons/icon_prowess.dds"
-							}
+								icon = {
+									name = "prowess_icon"
+									size = { 32 32 }
+									texture = "gfx/interface/icons/icon_prowess.dds"
+								}
 
-							text_single = {
-								name = "prowess_value"
-								text = "[CharacterWindow.GetCharacter.GetProwess|0]"
-								align = nobaseline
+								text_single = {
+									name = "prowess_value"
+									text = "[CharacterWindow.GetCharacter.GetProwess|0]"
+									align = nobaseline
+								}
 							}
 						}
-
 						divider_light = {
 							layoutpolicy_vertical = expanding
 						}
@@ -1171,7 +1162,7 @@ window = {
 							name = "realm_shield"
 							tooltip = "[Character.GetDefaultRealmFlagTooltipPrimaryTitleClickInfo]"
 							onclick = "[DefaultOnCoatOfArmsClick(Character.GetPrimaryTitle.GetID)]"
-							tooltip_enabled = no # HIDE_LIVIES MOD
+							tooltip_visible = no # HIDE_LIVIES MOD
 						}
 					}
 
@@ -1318,11 +1309,41 @@ window = {
 							}
 
 							vbox = {
+								layoutpolicy_vertical = expanding
+								spacing = -3
+
+								datacontext = "[Character.GetLegitimacyType]"
+								datacontext = "[Character.GetLegitimacyLevel]"
+
+								visible =  "[And( Character.IsAlive, And( Character.HasLandedTitles, And(Character.IsCountOrAbove, Character.GetGovernment.HasRule( 'legitimacy' ) ) ) )]"
+								using = tooltip_ne
+
+								tooltipwidget = {
+									legitimacy_hud_tooltip = {
+										datacontext = "[CharacterWindow.GetLegitimacyBar]"
+									}
+								}
+
+								icon = {
+									size = { 32 32 }
+
+									texture = "gfx/interface/icons/legitimacy_level_icon.dds"
+									framesize = { 70 70 }
+									frame = "[IntToFrameIndex( LegitimacyLevel.GetIndex )]"
+								}
+
+								text_single = {
+									text = CHARACTER_WINDOW_LEGITIMACY_LEVEL
+									align = nobaseline
+								}
+							}
+
+							vbox = {
 								tooltip = "[Character.GetGoldTooltipWithBalance]"
 								min_width = 40
 								spacing = -2
 								# HIDE_LIVIES:
-								tooltip_enabled = "[LessThan_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]" # HIDE_LIVIES MOD
+								tooltip_visible = "[LessThan_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]" # HIDE_LIVIES MOD
 								# HIDE_LIVIES:
 								#visible = "[Or (Character.IsLocalPlayer, (Character.GetGold|0) < 0)]" # HIDE_LIVIES MOD
 
@@ -2312,6 +2333,8 @@ window = {
 								visible = "[CharacterWindow.GetCharacter.HasActiveDiarchy]"
 								layoutpolicy_vertical = expanding
 
+								blockoverride "minimum_width" {}
+
 								blockoverride "gridbox" {
 									portrait_head_small_relationship = {
 
@@ -2330,11 +2353,14 @@ window = {
 								{
 									text = "[CharacterWindow.GetCharacter.GetDiarchTitle]"
 								}
+
+								blockoverride "expand_button" {}
 							}
 
+							### LOVERS 5 PORTRAITS
 							vbox_character_row_relationship_item = {
-								name = "lovers"
-								visible = "[CharacterWindow.GetCharacter.IsAdult]"
+								name = "lovers_no_diarchy"
+								visible = "[And( CharacterWindow.GetCharacter.IsAdult, Not( CharacterWindow.GetCharacter.HasActiveDiarchy ) )]"
 								layoutpolicy_vertical = expanding
 								layoutpolicy_horizontal = expanding
 
@@ -2350,14 +2376,50 @@ window = {
 								blockoverride "remaining_items"
 								{
 									visible = "[GreaterThan_int32( GetDataModelSize( CharacterWindow.GetRelationsOfType( GetRelation( 'lover' ) ) ), '(int32)5' )]"
-									margin = { 167 }
 									text = "[GetNumberAbove_int32( GetDataModelSize( CharacterWindow.GetRelationsOfType( GetRelation( 'lover' ) ) ), '(int32)5' )|=]"
-
 								}
 
 								blockoverride "expand_button_inside" {
 									visible = "[GreaterThan_int32( GetDataModelSize( CharacterWindow.GetRelationsOfType( GetRelation( 'lover' ) ) ), '(int32)5' )]"
 									onclick = "[CharacterWindow.ToggleExpandedRelation( 'lovers' )]"
+								}
+
+								blockoverride "gridbox_slots"
+								{
+									maxhorizontalslots = 5
+								}
+							}
+
+							### LOVERS 4 PORTRAITS (FOR WHEN REGENT PORTRAIT IS VISIBLE)
+							vbox_character_row_relationship_item = {
+								name = "lovers_diarchy"
+								visible = "[And( CharacterWindow.GetCharacter.IsAdult, CharacterWindow.GetCharacter.HasActiveDiarchy )]"
+								layoutpolicy_vertical = expanding
+								layoutpolicy_horizontal = expanding
+
+								blockoverride "portrait_datamodel" {
+									datamodel = "[CharacterWindow.GetRelationsOfType( GetRelation( 'lover' ) )]"
+								}
+
+								blockoverride "header_text"
+								{
+									text = "LOVERS_LABEL"
+								}
+
+								blockoverride "remaining_items"
+								{
+									visible = "[GreaterThan_int32( GetDataModelSize( CharacterWindow.GetRelationsOfType( GetRelation( 'lover' ) ) ), '(int32)5' )]"
+									text = "[GetNumberAbove_int32( GetDataModelSize( CharacterWindow.GetRelationsOfType( GetRelation( 'lover' ) ) ), '(int32)5' )|=]"
+								}
+
+								blockoverride "expand_button_inside" {
+									visible = "[GreaterThan_int32( GetDataModelSize( CharacterWindow.GetRelationsOfType( GetRelation( 'lover' ) ) ), '(int32)5' )]"
+									onclick = "[CharacterWindow.ToggleExpandedRelation( 'lovers' )]"
+								}
+
+								blockoverride "gridbox_slots"
+								{
+									maxhorizontalslots = 4
 								}
 							}
 
@@ -2374,7 +2436,6 @@ window = {
 								{
 									text = "GUARDIAN_LABEL"
 								}
-
 
 								blockoverride "expand_button" {}
 
@@ -3147,7 +3208,7 @@ window = {
 											position = { 0 -30 }
 											framesize = { 120 120 }
 											size = { 50 50 }
-											tooltip_enabled = no
+											tooltip_visible = no
 											scale = 1.3
 										}
 
@@ -3552,6 +3613,7 @@ types CharacterWindow
 			visible = "[ModifierItem.HasTooltipDataByTag('preview_list')]"
 
 			size = { 100% 100% }
+			alwaystransparent = no
 			texture = "[ModifierItem.GetIcon]"
 
 			block "icon_data" {
@@ -3641,6 +3703,7 @@ types CharacterWindow
 			# the tag is hard-coded, if you want to change the name or add a new one please contact someone from code team
 			visible = "[ModifierItem.HasTooltipDataByTag('single_modifier')]"
 			size = { 100% 100% }
+			alwaystransparent = no
 			texture = "[ModifierItem.GetIcon]"
 
 			block "icon_data" {
@@ -3664,6 +3727,7 @@ types CharacterWindow
 			visible = "[ModifierItem.HasTooltipDataByTag('scaled_single_modifier')]"
 
 			size = { 100% 100% }
+			alwaystransparent = no
 			texture = "[ModifierItem.GetIcon]"
 
 			block "icon_data" {
@@ -3832,7 +3896,10 @@ types CharacterWindow
 		widget = {
 			layoutpolicy_horizontal = expanding
 			size = { 0 25 }
-			min_width = 110
+
+			block "minimum_width" {
+				min_width = 110
+			}
 
 			block "expand_button" {
 				button_standard_hover = {
@@ -4165,7 +4232,7 @@ types CharacterWindow
 
 							coa_title_tiny_crown = {
 								name = "claim"
-								tooltip_enabled = no
+								tooltip_visible = no
 
 
 								highlight_icon = {
@@ -4274,7 +4341,7 @@ types CharacterWindow
 							frame = "[DiplomacyItem.GetDiplomacyFrame]"
 							framesize = { 120 120 }
 							size = { 50 50 }
-							tooltip_enabled = no
+							tooltip_visible = no
 
 							text_single = {
 								name = "warscore"
@@ -4337,14 +4404,14 @@ types CharacterWindow
 			datacontext = "[Struggle.GetCurrentPhase]"
 			visible = "[Struggle.IsInvolvedCharacter(Character.Self)]"
 
-			blockoverride "point_based_widget_content" { 
+			blockoverride "point_based_widget_content" {
 				highlight_icon = {
 					size = { 100% 100% }
 					texture = "gfx/interface/icons/struggle_banners/point_involved_banner_small.dds"
 				}
 			}
 
-			blockoverride "time_based_widget_content" { 
+			blockoverride "time_based_widget_content" {
 				highlight_icon = {
 					size = { 100% 100% }
 					texture = "gfx/interface/icons/struggle_banners/time_involved_banner_small.dds"
@@ -4356,14 +4423,14 @@ types CharacterWindow
 			datacontext = "[Struggle.GetCurrentPhase]"
 			visible = "[Struggle.IsInterloperCharacter(Character.Self)]"
 
-			blockoverride "point_based_widget_content" { 
+			blockoverride "point_based_widget_content" {
 				highlight_icon = {
 					size = { 100% 100% }
 					texture = "gfx/interface/icons/struggle_banners/point_interloper_banner_small.dds"
 				}
 			}
 
-			blockoverride "time_based_widget_content" { 
+			blockoverride "time_based_widget_content" {
 				highlight_icon = {
 					size = { 100% 100% }
 					texture = "gfx/interface/icons/struggle_banners/time_interloper_banner_small.dds"
@@ -4409,7 +4476,7 @@ types CharacterWindow
 				text = "[Title.GetNameNoTooltip|U]"
 				default_format = "#medium"
 				using = Font_Size_Medium
-				max_width = 270
+				max_width = 220
 			}
 
 			expand = {}
@@ -4570,7 +4637,7 @@ types CharacterWindow
 					}
 				}
 			}
-			
+
 			icon = {
 				name = "diarchy_active_icon"
 				visible = "[And(CharacterWindow.GetCharacter.HasActiveDiarchy, Not(CharacterWindow.ShowMarriageIcon))]"
