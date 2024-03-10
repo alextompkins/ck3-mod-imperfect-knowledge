@@ -1941,8 +1941,8 @@ template CoA_Realm_Defaults
 		onrightclick = "[DefaultOnCharacterRightClick(Character.GetID)]"
 		button_ignore = none
 
-		#tooltip_enabled = "[Not(IsInteractionMenuOpenForCharacter(Character.GetID))]"
-		tooltip_enabled = no # THE MOD
+		#tooltip_visible = "[Not(IsInteractionMenuOpenForCharacter(Character.GetID))]"
+		tooltip_visible = no # THE MOD
 	}
 
 	block "coa_realm_mouse_entry"

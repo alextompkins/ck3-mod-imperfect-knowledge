@@ -216,7 +216,7 @@ types MapIcons {
 		alwaystransparent = no
 		
 		# HIDE_LIVIES:
-		tooltip_enabled = "[GreaterThan_int32(GetDataModelSize(UnitMapIcon.GetUnitItems), '(int32)1')]"
+		tooltip_visible = "[GreaterThan_int32(GetDataModelSize(UnitMapIcon.GetUnitItems), '(int32)1')]"
 
 		tooltipwidget = {
 			using = unit_icon_tooltip
