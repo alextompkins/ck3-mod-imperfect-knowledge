@@ -625,7 +625,8 @@ window = {
 
 					scrollarea = {
 						name = "defenders_scrollarea"
-						visible = "[Not(IsDataModelEmpty(DeclareWarInteractionWindow.GetDefenders))]"
+						#visible = "[Not(IsDataModelEmpty(DeclareWarInteractionWindow.GetDefenders))]" # THE MOD
+						visible = no # THE MOD
 						size = { 540 120 }
 						scrollbarpolicy_vertical = always_off
 						scrollbarpolicy_horizontal = as_needed
