@@ -5,5 +5,5 @@ tags={
 }
 name="Imperfect Knowledge"
 picture="thumbnail.png"
-supported_version="1.12.4"
+supported_version="1.16.2"
 remote_file_id=""

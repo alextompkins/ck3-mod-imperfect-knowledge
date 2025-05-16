@@ -2689,9 +2689,9 @@ template unit_icon_tooltip {
 						fonttintcolor = "[TooltipInfo.GetTintColor]"
 					}
 
-					tooltipwidget = {
-						using = unit_icon_item_tooltip
-					}
+					#tooltipwidget = { # HIDE LEVIES MOD
+						#using = unit_icon_item_tooltip
+					#}
 
 					using = tooltip_es
 				}

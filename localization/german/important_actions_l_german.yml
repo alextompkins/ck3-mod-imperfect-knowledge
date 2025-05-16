@@ -180,8 +180,11 @@
  action_can_call_ally_combined_group_name: "@alliance_icon! Ihr könnt Verbündete rufen"
  action_can_call_ally_desc: "Ihr könnt Euren [Concept('ally', 'Verbündeten')|E] [recipient.GetUIName] in Eure [wars|E] rufen.\n\n[recipient.Custom('DE_PRO_PER_S_3P_N')|U] hat @soldier_icon![recipient.GetMilitaryStrengthText] [soldiers|E], die in Euren [Concept('wars','Kriegen')|E] helfen könnten.$CALL_TO_WAR_HELP$"
  action_can_call_ally_combined_group_description: "Ihr könnt Eure [Concept('allies', 'Verbündeten')|E] in Eure [wars|E] rufen.$CALL_TO_WAR_HELP$"
- action_can_call_ally_label: "@alliance_icon! Ihr könnt Euren Verbündeten [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip] rufen, #low @soldier_icon![recipient.GetMilitaryStrengthText]#!"
- action_can_call_ally_combined_label: "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#!"
+ # THE MOD:
+ action_can_call_ally_label: "@alliance_icon! Ihr könnt Euren Verbündeten [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip] rufen"
+ # THE MOD:
+ action_can_call_ally_combined_label: "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]!"
+ # -------------------
  action_can_call_ally_click: "#I Klicken, um Verbündeten zu rufen#!"
  CALL_TO_WAR_HELP: "\n\n#help Andere [rulers|E] in Euren Krieg zu rufen, macht es wahrscheinlicher, dass Ihr gewinnt, aber denkt daran, dass Ihr [prestige|E] für jeden [Concept('ally', 'Verbündeten')|E] einsetzen müsst, der sich anschließt. Andere [dynasty|E]-Mitglieder zu rufen, kostet [dynasty_prestige|E], andere [house|E]-Mitglieder schließen sich kostenlos an – wenn Sie Euren Ruf annehmen.#!"
  action_has_any_display_cb_on: "@war_icon! Ihr könntet [recipient.GetShortUINameNoTooltip] den [war|E] erklären"
@@ -189,8 +192,10 @@
  action_has_any_display_cb_on_combined_group_name: "@war_icon! Ihr könntet mehrere [wars|E] erklären"
  action_has_any_display_cb_on_desc: "Ihr habt einen oder mehrere [casus_bellis|E] gegen [recipient.GetUIName].$action_has_any_display_cb_on_HELP$"
  action_has_any_display_cb_on_combined_group_description: "Ihr habt [casus_bellis|E] gegen mehrere [rulers|E].$action_has_any_display_cb_on_HELP$"
- action_has_any_display_cb_on_label: "@war_icon! Ihr könnt [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip] den Krieg erklären, [actor.Custom2('GetMilitaryStrengthColoredCurrentSituation', recipient)]"
- action_has_any_display_cb_on_combined_label: "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip], [actor.Custom2('GetMilitaryStrengthColoredCurrentSituation', recipient)]"
+ # HIDE_LEVIES MOD:
+ action_has_any_display_cb_on_label: "@war_icon! Ihr könnt [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip] den Krieg erklären" # HIDE_LEVIES MOD
+ # HIDE_LEVIES MOD:
+ action_has_any_display_cb_on_combined_label: "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]" # HIDE_LEVIES MOD
  action_has_any_display_cb_on_click: "#I Klicken, um [casus_bellis|E] anzuzeigen#!"
  action_has_any_display_cb_on_combined_unimportant: "@warning_icon! #X Alle haben eine stärkere [army|E] als Ihr#!"
  action_has_any_display_cb_on_unimportant: "@warning_icon! #X [recipient.Custom('DE_PRO_PER_S_3P_N')|U] hat eine stärkere [army|E] als Ihr#!"
@@ -471,8 +476,10 @@
  action_can_propose_alliance_to_family_member_combined_group_name: "$action_can_propose_alliance_to_family_member_combined_group_label$"
  action_can_propose_alliance_to_family_member_desc: "[Select_CString(recipient.IsFemale, 'Eure', 'Eure')] [actor.Custom2('RelationToMe', recipient)] [recipient.GetUIName] und Ihr könnt ein [alliance|E] miteinander aushandeln, da Ihr bereits Blutsbande zueinander habt.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nSeid jedoch gewarnt! Solche [alliances|E] können mehr Ärger machen, als sie Euch ersparen …\n\nAchtet darauf, dass Ihr dieses [alliance|E] wirklich wollt und Euch nicht in sinnlose Konflikte hineinziehen lasst.#!"
  action_can_propose_alliance_to_family_member_combined_group_description: "Ihr könnt [alliances|E] mit einigen Mitgliedern Eurer [family|E] oder Personen, mit denen Eure Angehörigen verheiratet sind, aushandeln. Dazu braucht Ihr keine neue [marriage|E], da Ihr bereits Blutsbande zueinander habt.#help \n\nSeid jedoch gewarnt! Solche [alliances|E] können mehr Ärger machen, als sie Euch ersparen …\n\nAchtet darauf, dass Ihr dieses [alliance|E] wirklich wollt und Euch nicht in sinnlose Konflikte hineinziehen lasst.#!"
- action_can_propose_alliance_to_family_member_label: "@alliance_icon! [Select_CString(recipient.IsFemale, 'Eure', 'Eure')] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip] und Ihr könnt ein [alliance|E] miteinander aushandeln, #low @soldier_icon![recipient.GetMilitaryStrengthText]#! [actor.Custom2('GetInOrOutsideRealm', recipient)]"
- action_can_propose_alliance_to_family_member_combined_label: "[recipient.Custom('DE_PRO_POS_P_2P_N')|U] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#! [actor.Custom2('GetInOrOutsideRealm', recipient)]"
+   # HIDE_LEVIES MOD:
+ action_can_propose_alliance_to_family_member_label: "@alliance_icon! [Select_CString(recipient.IsFemale, 'Eure', 'Eure')] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip] und Ihr könnt ein [alliance|E] miteinander aushandeln"
+  # HIDE_LEVIES MOD:
+ action_can_propose_alliance_to_family_member_combined_label: "[recipient.Custom('DE_PRO_POS_P_2P_N')|U] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]"
  action_can_propose_alliance_to_family_member_click: "#I Klicken, um das Bündnis auszuhandeln#!"
  action_can_propose_alliance_to_family_member_combined_unimportant: "@warning_icon! #X Ihr werdet sie nicht in den Krieg rufen können#!"
  action_can_propose_alliance_to_family_member_unimportant: "@warning_icon! #X Ihr werdet [recipient.Custom('DE_PRO_PER_S_3P_A')] nicht in den Krieg rufen können#!"
@@ -481,7 +488,8 @@
  action_can_potentially_propose_alliance_to_family_member_combined_group_name: "$action_can_potentially_propose_alliance_to_family_member_combined_group_label$"
  action_can_potentially_propose_alliance_to_family_member_desc: "[recipient.Custom('DE_PRO_POS_P_2P_N')|U] [actor.Custom2('RelationToMe', recipient)] [recipient.GetUIName] würde ein [alliance|E] mit Euch zum jetzigen Zeitpunkt #EMP nicht#! akzeptieren, könnte aber potenziell dazu gebracht werden.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nFalls Ihr das Bündnis braucht, könnte es helfen, die [opinion|E] zu erhöhen oder ein [hook|E] zu erhalten.\n\nHaltet Ihr die Maus über die Akzeptanzbewertung, könnt Ihr sehen, wie dicht Ihr davor steht, das Bündnis zu schließen.#!"
  action_can_potentially_propose_alliance_to_family_member_combined_group_description: "Diese Charaktere würden ein [alliance|E] mit Euch zum jetzigen Zeitpunkt #EMP nicht#! akzeptieren, könnten aber potenziell dazu gebracht werden.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nFalls Ihr das Bündnis braucht, könnte es helfen, die [opinion|E] zu erhöhen oder ein [hook|E] zu erhalten.\n\nHaltet Ihr die Maus über die Akzeptanzbewertung, könnt Ihr sehen, wie dicht Ihr davor steht, das Bündnis zu schließen.#!"
- action_can_potentially_propose_alliance_to_family_member_label: "@alliance_icon! [Select_CString(recipient.IsFemale, 'Eure', 'Eure')] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip] und Ihr könnt potenziell ein Bündnis miteinander aushandeln, #low @soldier_icon![recipient.GetMilitaryStrengthText]#! [actor.Custom2('GetInOrOutsideRealm', recipient)]"
+ # HIDE_LEVIES MOD:
+action_can_potentially_propose_alliance_to_family_member_label: "@alliance_icon! [Select_CString(recipient.IsFemale, 'Eure', 'Eure')] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip] und Ihr könnt potenziell ein Bündnis miteinander aushandeln" # HIDE_LEVIES MOD
  action_can_potentially_propose_alliance_to_family_member_combined_label: "$action_can_propose_alliance_to_family_member_combined_label$"
  action_can_potentially_propose_alliance_to_family_member_click: "#I Klicken, um potenzielle Bündnisverhandlungen anzuzeigen#!"
  action_can_potentially_propose_alliance_to_family_member_combined_unimportant: "@warning_icon! #X Ihr habt bereits zwei oder mehr Bündnisse#!"

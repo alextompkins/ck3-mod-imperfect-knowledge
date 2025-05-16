@@ -105,6 +105,7 @@ window = {
 
 					vbox = {
 						datacontext = "[DeclareWarInteractionWindow.GetMilitaryStrengthInfo]"
+						visible = no # HIDE_LEVIES
 						margin_top = 16
 
 						declare_war_progressbar = {}
@@ -616,7 +617,8 @@ window = {
 
 					scrollarea = {
 						name = "defenders_scrollarea"
-						visible = "[Not(IsDataModelEmpty(DeclareWarInteractionWindow.GetDefenders))]"
+						#visible = "[Not(IsDataModelEmpty(DeclareWarInteractionWindow.GetDefenders))]" # THE MOD
+						visible = no # THE MOD
 						size = { 540 100 }
 						scrollbarpolicy_vertical = always_off
 						scrollbarpolicy_horizontal = as_needed
@@ -656,7 +658,7 @@ window = {
 					layoutpolicy_horizontal = expanding
 					blockoverride "checkbox_on_click"
 					{
-						onclick = "[DeclareWarInteractionWindow.ToggleHookCheckbox]" 
+						onclick = "[DeclareWarInteractionWindow.ToggleHookCheckbox]"
 					}
 				}
 
@@ -712,7 +714,7 @@ window = {
 					using = tooltip_nw
 					parentanchor = center
 					position = { 150 0 }
-				}		
+				}
 			}
 		}
 	}
@@ -797,6 +799,7 @@ window = {
 
 									hbox = {
 										layoutpolicy_horizontal = expanding
+										visible = no # HIDE_LEVIES
 
 										text_single = {
 											name = "ally_military_strength_text"

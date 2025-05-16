@@ -105,8 +105,11 @@
  HOSTAGE_RELATIVE_SUCCESSION_PLACE_REASON: "Relative Plätze der [hostages|E] in [succession|E]: $VALUE|=+0$"
  HOSTAGE_SEX_DIFFERENCE_REASON: "[hostages|E] haben unterschiedliches Geschlecht: $VALUE|=+0$"
  HOSTAGE_SUCCESSION_PLACE_REASON: "Platz der [hostages|E] in [line_of_succession|E]: $VALUE|=+0$"
- HOSTAGE_RELATIVE_MILITARY_POWER_REASON: "Relative militärische Stärke: $VALUE|=+0$ #weak ([actor.GetPrimaryTitle.GetNameNoTier]: [SCOPE.ScriptValue('actor_current_military_strength')|0] gegen [recipient.GetPrimaryTitle.GetNameNoTier]: [SCOPE.ScriptValue('recipient_current_military_strength')|0])#!"
- HOSTAGE_ALLY_MILITARY_POWER_REASON: "Militärische Stärke der [Concept('allies', 'Verbündeten')|E]: $VALUE|=+0$ #weak ([actor.GetPrimaryTitle.GetNameNoTier]: [SCOPE.ScriptValue('actor_ally_military_strength')|0] gegen [recipient.GetPrimaryTitle.GetNameNoTier]: [SCOPE.ScriptValue('recipient_ally_military_strength')|0])#!"
+ # THE MOD:
+ HOSTAGE_RELATIVE_MILITARY_POWER_REASON: "Relative militärische Stärke: $VALUE|=+0$"
+ # THE MOD:
+ HOSTAGE_ALLY_MILITARY_POWER_REASON: "Militärische Stärke der [Concept('allies', 'Verbündeten')|E]: $VALUE|=+0$"
+ #----------------------
  HOSTAGE_AGE_REASON: "Alter der [hostage|E]: $VALUE|=+0$"
  HOSTAGE_CHILD_REASON: "[hostage|E] ist ein Kind: $VALUE|=+0$"
  HOSTAGE_OWN_CHILD_REASON: "[hostage|E] ist ein Kind des [Concept('rulers', 'Herrschers')|E] des [Concept('home_court', 'Heimathofs')|E]: $VALUE|=+0$"

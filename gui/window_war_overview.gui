@@ -437,20 +437,21 @@
 								}
 							}
 
-							text_single = { 
+							text_single = {
 								layoutpolicy_horizontal = expanding
-								text = "[WarOverviewWindow.GetWarStanceName( WarOverviewWindow.GetLeftSideLeaderItem.IsAttacker )]" 
-								tooltip = "[WarOverviewWindow.GetWarStanceDesc( WarOverviewWindow.GetLeftSideLeaderItem.IsAttacker )]" 
-								using = Font_Size_Medium 
+								text = "[WarOverviewWindow.GetWarStanceName( WarOverviewWindow.GetLeftSideLeaderItem.IsAttacker )]"
+								tooltip = "[WarOverviewWindow.GetWarStanceDesc( WarOverviewWindow.GetLeftSideLeaderItem.IsAttacker )]"
+								using = Font_Size_Medium
 								default_format = "#high"
-								align = nobaseline 
-								autoresize = yes 
+								align = nobaseline
+								autoresize = yes
 								max_width = 230
 								margin_left = 7
 								margin_bottom = 5
-							} 
+							}
 
 							vbox = {
+								visible = no # HIDE_LEVIES MOD
 								layoutpolicy_horizontal = expanding
 								margin = { 5 0 }
 
@@ -530,7 +531,8 @@
 
 										blockoverride "portrait_button_template_tooltip"
 										{
-											tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+											# HIDE_LEVIES:
+											#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LEVIES MOD
 										}
 
 									}
@@ -641,7 +643,8 @@
 
 									blockoverride "portrait_button_template_tooltip"
 									{
-										tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										# HIDE_LEVIES:
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LEVIES MOD
 									}
 
 
@@ -796,20 +799,21 @@
 								expand = {}
 							}
 
-							text_single = { 
-								layoutpolicy_horizontal = expanding 
-								text = "[WarOverviewWindow.GetWarStanceName( WarOverviewWindow.GetRightSideLeaderItem.IsAttacker )]" 
-								tooltip = "[WarOverviewWindow.GetWarStanceDesc( WarOverviewWindow.GetRightSideLeaderItem.IsAttacker )]" 
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "[WarOverviewWindow.GetWarStanceName( WarOverviewWindow.GetRightSideLeaderItem.IsAttacker )]"
+								tooltip = "[WarOverviewWindow.GetWarStanceDesc( WarOverviewWindow.GetRightSideLeaderItem.IsAttacker )]"
 								using = Font_Size_Medium
 								default_format = "#high"
-								align = nobaseline 
-								autoresize = yes 
-								max_width = 230 
+								align = nobaseline
+								autoresize = yes
+								max_width = 230
 								margin_left = 7
 								margin_bottom = 5
-							} 
+							}
 
 							hbox = {
+								visible = no # HIDE_LEVIES MOD
 								layoutpolicy_horizontal = expanding
 
 								background = {
@@ -817,6 +821,7 @@
 								}
 
 								widget = {
+									#visible = no # HIDE_LEVIES MOD
 									size = { 55 60 }
 
 									icon = {
@@ -1494,7 +1499,8 @@
 									blockoverride "opinion_box" {}
 									blockoverride "portrait_button_template_tooltip"
 									{
-										tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										# HIDE_LEVIES:
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LEVIES MOD
 									}
 								}
 
@@ -1519,6 +1525,7 @@
 										layoutpolicy_vertical = growing
 
 										hbox_soldiers_and_quality_small = {
+											visible = no # HIDE_LEVIES MOD
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}
 
@@ -1607,7 +1614,7 @@
 									blockoverride "opinion_box" {}
 									blockoverride "portrait_button_template_tooltip"
 									{
-										tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LEVIES MOD
 									}
 								}
 
@@ -1632,6 +1639,8 @@
 										layoutpolicy_vertical = growing
 
 										hbox_soldiers_and_quality_small = {
+											# HIDE_LEVIES MOD
+											visible = no # HIDE_LEVIES MOD
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}
 
