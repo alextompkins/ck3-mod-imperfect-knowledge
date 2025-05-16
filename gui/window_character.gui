@@ -1163,6 +1163,7 @@ window = {
 							name = "realm_shield"
 							tooltip = "[Character.GetDefaultRealmFlagTooltipPrimaryTitleClickInfo]"
 							onclick = "[DefaultOnCoatOfArmsClick(Character.GetPrimaryTitle.GetID)]"
+							tooltip_visible = no # HIDE_LEVIES MOD
 						}
 					}
 
@@ -1342,16 +1343,30 @@ window = {
 								tooltip = "[Character.GetGoldTooltipWithBalance]"
 								min_width = 40
 								spacing = -2
+								# HIDE_LEVIES:
+								tooltip_visible = "[LessThan_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]" # HIDE_LEVIES MOD
+								# HIDE_LEVIES:
+								#visible = "[Or (Character.IsLocalPlayer, (Character.GetGold|0) < 0)]" # HIDE_LEVIES MOD
 
 								icon = {
 									name = "icon_gold"
 									size = { 30 30 }
 									texture = "gfx/interface/icons/icon_gold.dds"
 								}
+								
+								text_single = { # gold < 0 # HIDE_LEVIES MOD
+									name = "total_gold_negative"
+									visible = "[LessThan_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]"
+									text = "[Character.GetGold|+0]"
+									default_format = "#high"
+									align = center|nobaseline
+								}
 
-								text_single = {
+								text_single = { # gold > 0 # HIDE_LEVIES MOD
 									name = "total_gold"
-									text = "[Character.GetGold|0]"
+									# HIDE_LEVIES:
+									visible = "[GreaterThanOrEqualTo_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]"
+									text = "?" 
 									default_format = "#high"
 									align = center|nobaseline
 									fontsize_min = 12
@@ -1406,6 +1421,7 @@ window = {
 							}
 
 							vbox = {
+								visible = no # HIDE_LEVIES MOD
 								visible = "[Character.HasLandedTitles]"
 								tooltip = "[CharacterWindow.GetMilitaryStrengthTooltip]"
 								spacing = -2

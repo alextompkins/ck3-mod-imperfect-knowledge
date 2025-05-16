@@ -1404,7 +1404,7 @@ types Lists
 					layoutpolicy_horizontal = expanding
 					margin = { 0 3 }
 					margin_bottom = 8
-
+					visible = no # THE MOD
 					hbox = {
 						layoutpolicy_horizontal = expanding
 						spacing = 3
@@ -1422,11 +1422,11 @@ types Lists
 						}
 
 						text_single = {
+							visible = no # THE MOD
 							name = "relation_to_court_owner"
 							default_format = "#low"
 							align = nobaseline
-							max_width = 370
-							visible = "[Not(Character.IsHostage)]"
+							#visible = "[Not(Character.IsHostage)]" # THE MOD
 
 							block "description_relation_text" {
 								text = "[Character.GetRelationToString( CharacterWindow.GetCourtOwner )]"

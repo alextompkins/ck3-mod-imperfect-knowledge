@@ -183,8 +183,11 @@
  action_can_call_ally_combined_group_name:2 "@alliance_icon! You can call Allies"
  action_can_call_ally_desc:3 "You can call your [ally|E] [recipient.GetUIName] to your [wars|E].\n\n[recipient.GetSheHe|U] has @soldier_icon![recipient.GetMilitaryStrengthText] [soldiers|E] that could help in your [wars|E].$CALL_TO_WAR_HELP$"
  action_can_call_ally_combined_group_description:2 "You can call your [allies|E] to your [wars|E].$CALL_TO_WAR_HELP$"
- action_can_call_ally_label:3 "@alliance_icon! You can call on your Ally [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#!"
- action_can_call_ally_combined_label:1 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#!"
+ # THE MOD:
+ action_can_call_ally_label:3 "@alliance_icon! You can call on your Ally [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]"
+ # THE MOD:
+ action_can_call_ally_combined_label:1 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]!"
+ # ----------------------------------------
  action_can_call_ally_click:0 "#I Click to call Ally#!"
  CALL_TO_WAR_HELP:1 "\n\n#help Calling other [rulers|E] into your War means it is more likely you win, but be aware that you must spend [prestige|E] for each [ally|E] that joins. Summoning [dynasty|E] Members costs [dynasty_prestige|E], while [house|E] members will join you for free — if they accept your call.#!"
 
@@ -193,8 +196,8 @@
  action_has_any_display_cb_on_combined_group_name:2 "@war_icon! You could declare multiple [wars|E]"
  action_has_any_display_cb_on_desc:3 "You have one or more [casus_bellis|E] on [recipient.GetUIName].$action_has_any_display_cb_on_HELP$"
  action_has_any_display_cb_on_combined_group_description:3 "You have [casus_bellis|E] on multiple [rulers|E].$action_has_any_display_cb_on_HELP$"
- action_has_any_display_cb_on_label:2 "@war_icon! You can declare War on [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip], [actor.Custom2('GetMilitaryStrengthColoredCurrentSituation', recipient)]"
- action_has_any_display_cb_on_combined_label:1 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip], [actor.Custom2('GetMilitaryStrengthColoredCurrentSituation', recipient)]"
+ action_has_any_display_cb_on_label:2 "@war_icon! You can declare War on [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]" # HIDE_LEVIES MOD
+ action_has_any_display_cb_on_combined_label:1 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]" # HIDE_LEVIES MOD
  action_has_any_display_cb_on_click:0 "#I Click to view [casus_bellis|E]#!"
  action_has_any_display_cb_on_combined_unimportant:2 "@warning_icon! #X All have stronger a [army|E] than you#!"
  action_has_any_display_cb_on_unimportant:2 "@warning_icon! #X [recipient.GetSheHe|U] has a stronger [army|E] than you#!"
@@ -515,8 +518,10 @@
  action_can_propose_alliance_to_family_member_combined_group_name:0 "$action_can_propose_alliance_to_family_member_combined_group_label$"
  action_can_propose_alliance_to_family_member_desc:3 "You can negotiate an [alliance|E] with your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUIName] as you already share bonds of blood.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nBe warned! Some [alliances|E] are more trouble than they are worth...\n\nMake sure that you truly desire this [alliance|E], as you might be dragged into their pointless conflicts.#!"
  action_can_propose_alliance_to_family_member_combined_group_description:3 "You can negotiate [alliances|E] with some members of your [family|E] or those who they are married to without arranging a new [marriage|E], as you already share bonds of blood.#help \n\nBe warned! Some [alliances|E] are more trouble than they are worth...\n\nMake sure that you truly desire this [alliance|E], as you might be dragged into their pointless conflicts.#!"
- action_can_propose_alliance_to_family_member_label:1 "@alliance_icon! You can Negotiate an Alliance with your [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#! [actor.Custom2('GetInOrOutsideRealm', recipient)]"
- action_can_propose_alliance_to_family_member_combined_label:1 "Your [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#! [actor.Custom2('GetInOrOutsideRealm', recipient)]"
+  # HIDE_LEVIES MOD:
+ action_can_propose_alliance_to_family_member_label:1 "@alliance_icon! You can Negotiate an Alliance with your [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip]"
+  # HIDE_LEVIES MOD:
+ action_can_propose_alliance_to_family_member_combined_label:1 "Your [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]"
  action_can_propose_alliance_to_family_member_click:0 "#I Click to Negotiate Alliance#!"
  action_can_propose_alliance_to_family_member_combined_unimportant: "@warning_icon! #X You will not be able to call them to War#!"
  action_can_propose_alliance_to_family_member_unimportant: "@warning_icon! #X You will not be able to call [recipient.GetHerHim] to War#!"
@@ -526,7 +531,7 @@
  action_can_potentially_propose_alliance_to_family_member_combined_group_name:0 "$action_can_potentially_propose_alliance_to_family_member_combined_group_label$"
  action_can_potentially_propose_alliance_to_family_member_desc:0 "Your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUIName] would #EMP not#! accept an [alliance|E] with you right now, but could potentially be convinced.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nIf you find yourself in need of an Alliance, improving [opinion|E] or gaining a [hook|E] could enable you to negotiate one.\n\nYou can check how close they are to accepting your Alliance offer by hovering the acceptance score when the interaction is open.#!"
  action_can_potentially_propose_alliance_to_family_member_combined_group_description:0 "These characters would #EMP not#! accept an [alliance|E] with you right now, but could potentially be convinced.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nIf you find yourself in need of an Alliance, improving [opinion|E] or gaining a [hook|E] could enable you to negotiate one.\n\nYou can check how close they are to accepting your Alliance offer by hovering the acceptance score when the interaction is open.#!"
- action_can_potentially_propose_alliance_to_family_member_label:0 "@alliance_icon! You can Potentially Negotiate an Alliance with your [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip], #low @soldier_icon![recipient.GetMilitaryStrengthText]#! [actor.Custom2('GetInOrOutsideRealm', recipient)]"
+ action_can_potentially_propose_alliance_to_family_member_label:0 "@alliance_icon! You can Potentially Negotiate an Alliance with your [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip]" # HIDE_LEVIES MOD
  action_can_potentially_propose_alliance_to_family_member_combined_label:0 "$action_can_propose_alliance_to_family_member_combined_label$"
  action_can_potentially_propose_alliance_to_family_member_click:0 "#I Click to View Potential Alliance Negotiation#!"
  action_can_potentially_propose_alliance_to_family_member_combined_unimportant:0 "@warning_icon! #X You already have two or more Alliances#!"

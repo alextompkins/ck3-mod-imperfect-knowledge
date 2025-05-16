@@ -281,6 +281,7 @@ types CharacterInteraction
 						}
 
 						strength_balance = {
+							visible = no # HIDE_LEVIES MOD
 							datacontext = "[AllianceInfo.GetMilitaryInfo]"
 							blockoverride "StrengthBalanceAllies" {}
 						}

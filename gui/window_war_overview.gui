@@ -438,6 +438,7 @@ window = {
 							}
 
 							vbox = {
+								visible = no # HIDE_LEVIES MOD
 								layoutpolicy_horizontal = expanding
 								margin = { 5 0 }
 
@@ -517,7 +518,8 @@ window = {
 
 										blockoverride "portrait_button_template_tooltip"
 										{
-											tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+											# HIDE_LEVIES:
+											#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LEVIES MOD
 										}
 
 									}
@@ -628,7 +630,8 @@ window = {
 
 									blockoverride "portrait_button_template_tooltip"
 									{
-										tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										# HIDE_LEVIES:
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LEVIES MOD
 									}
 
 
@@ -784,6 +787,7 @@ window = {
 							}
 
 							hbox = {
+								visible = no # HIDE_LEVIES MOD
 								layoutpolicy_horizontal = expanding
 
 								background = {
@@ -791,6 +795,7 @@ window = {
 								}
 
 								widget = {
+									#visible = no # HIDE_LEVIES MOD
 									size = { 55 60 }
 
 									icon = {
@@ -1468,7 +1473,8 @@ window = {
 									blockoverride "opinion_box" {}
 									blockoverride "portrait_button_template_tooltip"
 									{
-										tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										# HIDE_LEVIES:
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LEVIES MOD
 									}
 								}
 
@@ -1493,6 +1499,7 @@ window = {
 										layoutpolicy_vertical = growing
 
 										soldiers_and_quality_small = {
+											visible = no # HIDE_LEVIES MOD
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}
 
@@ -1581,7 +1588,7 @@ window = {
 									blockoverride "opinion_box" {}
 									blockoverride "portrait_button_template_tooltip"
 									{
-										tooltip = "[WarParticipantItem.GetParticipantTooltip]"
+										#tooltip = "[WarParticipantItem.GetParticipantTooltip]" # HIDE_LEVIES MOD
 									}
 								}
 
@@ -1606,6 +1613,8 @@ window = {
 										layoutpolicy_vertical = growing
 
 										soldiers_and_quality_small = {
+											# HIDE_LEVIES MOD
+											visible = no # HIDE_LEVIES MOD
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}
 

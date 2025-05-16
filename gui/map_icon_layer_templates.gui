@@ -214,6 +214,9 @@ types MapIcons {
 		datacontext = "[UnitMapIcon.GetDisplayedUnitItem]"
 		allow_outside = yes
 		alwaystransparent = no
+		
+		# HIDE_LEVIES:
+		tooltip_visible = "[GreaterThan_int32(GetDataModelSize(UnitMapIcon.GetUnitItems), '(int32)1')]"
 
 		tooltipwidget = {
 			using = unit_icon_tooltip
