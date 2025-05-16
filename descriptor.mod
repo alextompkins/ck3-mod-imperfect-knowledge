@@ -3,7 +3,7 @@ tags={
 	"Graphics"
 	"Balance"
 }
-name="Hide levies"
+name="Imperfect Knowledge"
 picture="thumbnail.png"
 supported_version="1.12.4"
-remote_file_id="2336223087"
+remote_file_id=""
