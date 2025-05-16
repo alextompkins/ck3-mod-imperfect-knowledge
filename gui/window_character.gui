@@ -1163,7 +1163,7 @@ window = {
 							name = "realm_shield"
 							tooltip = "[Character.GetDefaultRealmFlagTooltipPrimaryTitleClickInfo]"
 							onclick = "[DefaultOnCoatOfArmsClick(Character.GetPrimaryTitle.GetID)]"
-							tooltip_visible = no # HIDE_LIVIES MOD
+							tooltip_visible = no # HIDE_LEVIES MOD
 						}
 					}
 
@@ -1343,10 +1343,10 @@ window = {
 								tooltip = "[Character.GetGoldTooltipWithBalance]"
 								min_width = 40
 								spacing = -2
-								# HIDE_LIVIES:
-								tooltip_visible = "[LessThan_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]" # HIDE_LIVIES MOD
-								# HIDE_LIVIES:
-								#visible = "[Or (Character.IsLocalPlayer, (Character.GetGold|0) < 0)]" # HIDE_LIVIES MOD
+								# HIDE_LEVIES:
+								tooltip_visible = "[LessThan_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]" # HIDE_LEVIES MOD
+								# HIDE_LEVIES:
+								#visible = "[Or (Character.IsLocalPlayer, (Character.GetGold|0) < 0)]" # HIDE_LEVIES MOD
 
 								icon = {
 									name = "icon_gold"
@@ -1354,7 +1354,7 @@ window = {
 									texture = "gfx/interface/icons/icon_gold.dds"
 								}
 								
-								text_single = { # gold < 0 # HIDE_LIVIES MOD
+								text_single = { # gold < 0 # HIDE_LEVIES MOD
 									name = "total_gold_negative"
 									visible = "[LessThan_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]"
 									text = "[Character.GetGold|+0]"
@@ -1362,9 +1362,9 @@ window = {
 									align = center|nobaseline
 								}
 
-								text_single = { # gold > 0 # HIDE_LIVIES MOD
+								text_single = { # gold > 0 # HIDE_LEVIES MOD
 									name = "total_gold"
-									# HIDE_LIVIES:
+									# HIDE_LEVIES:
 									visible = "[GreaterThanOrEqualTo_CFixedPoint(Character.GetGold, '(CFixedPoint)0')]"
 									text = "?" 
 									default_format = "#high"
@@ -1421,7 +1421,7 @@ window = {
 							}
 
 							vbox = {
-								visible = no # HIDE_LIVIES MOD
+								visible = no # HIDE_LEVIES MOD
 								visible = "[Character.HasLandedTitles]"
 								tooltip = "[CharacterWindow.GetMilitaryStrengthTooltip]"
 								spacing = -2

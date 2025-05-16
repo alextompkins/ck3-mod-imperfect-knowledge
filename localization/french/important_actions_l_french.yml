@@ -179,10 +179,10 @@
  action_has_any_display_cb_on_combined_group_name: "@war_icon! Vous pouvez déclarer plusieurs [wars|El]"
  action_has_any_display_cb_on_desc: "Vous avez au moins un [casus_belli|El] contre [recipient.Custom('FR_le_Char_U_P')][recipient.GetUIName].$action_has_any_display_cb_on_HELP$"
  action_has_any_display_cb_on_combined_group_description: "Vous avez des [casus_belli|El] contre plusieurs [rulers|El].$action_has_any_display_cb_on_HELP$"
- # HIDE LEVIES MOD:
- action_has_any_display_cb_on_label: "@war_icon! Vous pouvez déclarer la guerre [recipient.Custom('FR_au_Char_U_Pi')][recipient.GetShortUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]" # HIDE LEVIES MOD
- # HIDE LEVIES MOD:
- action_has_any_display_cb_on_combined_label: "[recipient.GetUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]" # HIDE LEVIES MOD
+ # HIDE_LEVIES MOD:
+ action_has_any_display_cb_on_label: "@war_icon! Vous pouvez déclarer la guerre [recipient.Custom('FR_au_Char_U_Pi')][recipient.GetShortUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]" # HIDE_LEVIES MOD
+ # HIDE_LEVIES MOD:
+ action_has_any_display_cb_on_combined_label: "[recipient.GetUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]" # HIDE_LEVIES MOD
  action_has_any_display_cb_on_click: "#I Cliquer pour voir les [casus_bellis|El]#!"
  action_has_any_display_cb_on_combined_unimportant: "@warning_icon! #X Ils ont tous une [army|El] plus puissante que vous#!"
  action_has_any_display_cb_on_unimportant: "@warning_icon! #X [recipient.GetSheHe|U] a une [army|El] plus puissante que vous#!"
@@ -463,10 +463,10 @@
  action_can_propose_alliance_to_family_member_combined_group_name: "$action_can_propose_alliance_to_family_member_combined_group_label$"
  action_can_propose_alliance_to_family_member_desc: "Vous pouvez négocier une [alliance|El] avec votre [actor.Custom2('RelationToMe', recipient)] [recipient.Custom('FR_le_Char_U_P')][recipient.GetUIName] puisque vous partagez déjà des liens de sang.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]\n\n#help Certaines alliances apportent plus d’ennuis qu’autre chose, alors prenez garde de ne pas vous laisser entraîner dans des conflits inutiles.#!"
  action_can_propose_alliance_to_family_member_combined_group_description: "Vous pouvez négocier des [alliances|El] avec certains membres de votre [family|El] ou ceux avec qui ils sont mariés sans arranger un [marriage|El], puisque vous partagez déjà des liens de sang.\n\n#help Certaines alliances apportent plus d’ennuis qu’autre chose, alors prenez garde de ne pas vous laisser entraîner dans des conflits inutiles.#!"
-# HIDE LEVIES MOD:
- action_can_propose_alliance_to_family_member_label: "@alliance_icon! Vous pouvez négocier une alliance avec votre [actor.Custom2('RelationToMe', recipient)], [recipient.Custom('FR_le_Char_U_Pi')][recipient.GetShortUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]" # HIDE LEVIES MOD
-  # HIDE LEVIES MOD:
- action_can_propose_alliance_to_family_member_combined_label: "Votre [actor.Custom2('RelationToMe', recipient)], [recipient.Custom('FR_le_Char_U_P')][recipient.GetUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]" # HIDE LEVIES MOD
+# HIDE_LEVIES MOD:
+ action_can_propose_alliance_to_family_member_label: "@alliance_icon! Vous pouvez négocier une alliance avec votre [actor.Custom2('RelationToMe', recipient)], [recipient.Custom('FR_le_Char_U_Pi')][recipient.GetShortUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]" # HIDE_LEVIES MOD
+  # HIDE_LEVIES MOD:
+ action_can_propose_alliance_to_family_member_combined_label: "Votre [actor.Custom2('RelationToMe', recipient)], [recipient.Custom('FR_le_Char_U_P')][recipient.GetUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]" # HIDE_LEVIES MOD
  action_can_propose_alliance_to_family_member_click: "#I Cliquer pour négocier une alliance#!"
  action_can_propose_alliance_to_family_member_combined_unimportant: "@warning_icon! #X Vous ne pourrez pas les appeler à la guerre#!"
  action_can_propose_alliance_to_family_member_unimportant: "@warning_icon! #X Vous ne pourrez pas l’appeler à la guerre#!"
@@ -475,8 +475,8 @@
  action_can_potentially_propose_alliance_to_family_member_combined_group_name: "$action_can_potentially_propose_alliance_to_family_member_combined_group_label$"
  action_can_potentially_propose_alliance_to_family_member_desc: "Votre [actor.Custom2('RelationToMe', recipient)] [recipient.Custom('FR_le_Char_U_P')][recipient.GetUIName] n’accepterait pas une [alliance|El] avec vous dans la situation actuelle, mais vous pourriez peut-être [recipient.Custom('FR_LeLa')] convaincre.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nSi vous avez besoin d’une alliance, améliorer l’[opinion|El] ou obtenir un [hook|El] pourrait vous permettre d’en négocier une.\n\nVous pouvez vérifier dans quelle mesure [recipient.Custom('FR_IlElle')] serait prêt[recipient.Custom('FR_E')] à accepter votre offre d’alliance en survolant le score d’acceptation lorsque l’interaction est ouverte.#!"
  action_can_potentially_propose_alliance_to_family_member_combined_group_description: "Ces personnages n’accepteraient pas une [alliance|El] avec vous dans la situation actuelle, mais vous pourriez peut-être les convaincre.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nSi vous avez besoin d’une alliance, améliorer l’[opinion|El] ou obtenir un [hook|El] pourrait vous permettre d’en négocier une.\n\nVous pouvez vérifier dans quelle mesure ils seraient prêts à accepter votre offre d’alliance en survolant le score d’acceptation lorsque l’interaction est ouverte.#!"
-# HIDE LEVIES MOD:
-action_can_potentially_propose_alliance_to_family_member_label: "@alliance_icon! Vous pouvez potentiellement négocier une alliance avec votre [actor.Custom2('RelationToMe', recipient)], [recipient.Custom('FR_le_Char_U_Pi')][recipient.GetShortUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]"  # HIDE LEVIES MOD
+# HIDE_LEVIES MOD:
+action_can_potentially_propose_alliance_to_family_member_label: "@alliance_icon! Vous pouvez potentiellement négocier une alliance avec votre [actor.Custom2('RelationToMe', recipient)], [recipient.Custom('FR_le_Char_U_Pi')][recipient.GetShortUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')]"  # HIDE_LEVIES MOD
  action_can_potentially_propose_alliance_to_family_member_combined_label: "$action_can_propose_alliance_to_family_member_combined_label$"
  action_can_potentially_propose_alliance_to_family_member_click: "#I Cliquez pour voir la négociation d’alliance potentielle#!"
  action_can_potentially_propose_alliance_to_family_member_combined_unimportant: "@warning_icon! #X Vous avez déjà au moins deux alliances#!"

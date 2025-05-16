@@ -430,7 +430,7 @@ window = {
 							}
 
 							text_single = {
-								visible = no # HIDE_LIVIES MOD
+								visible = no # HIDE_LEVIES MOD
 								layoutpolicy_horizontal = expanding
 								margin = { 8 8 }
 
@@ -1593,7 +1593,7 @@ window = {
 													default_format = "#weak"
 												}
 												text_single = {
-													visible = no # HIDE_LIVIES MOD
+													visible = no # HIDE_LEVIES MOD
 													text = "HOUSE_LIST_HEAD_MAX_MILITARY_STRENGTH"
 													tooltip = "HOUSE_LIST_MILITARY_STRENGTH_TT"
 													align = right

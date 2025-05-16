@@ -105,7 +105,7 @@ window = {
 
 					vbox = {
 						datacontext = "[DeclareWarInteractionWindow.GetMilitaryStrengthInfo]"
-						visible = no # HIDE_LIVIES
+						visible = no # HIDE_LEVIES
 
 						
 						
@@ -797,7 +797,7 @@ window = {
 
 									hbox = {
 										layoutpolicy_horizontal = expanding
-										visible = no # HIDE_LIVIES
+										visible = no # HIDE_LEVIES
 
 										text_single = {
 											name = "ally_military_strength_text"

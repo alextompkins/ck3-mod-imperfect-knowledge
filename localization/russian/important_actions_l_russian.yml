@@ -179,10 +179,10 @@
  action_has_any_display_cb_on_combined_group_name: "@war_icon! Вы можете объявить несколько [Concept( 'wars', 'войн' )|E]"
  action_has_any_display_cb_on_desc: "У вас есть один или несколько [Concept( 'casus_bellis', 'поводов для войны' )|E] против персонажа [recipient.GetUIName].$action_has_any_display_cb_on_HELP$"
  action_has_any_display_cb_on_combined_group_description: "У вас есть [Concept( 'casus_bellis', 'поводы для войны' )|E] против нескольких [Concept( 'rulers', 'правителей' )|E].$action_has_any_display_cb_on_HELP$"
- # HIDE LEVIES MOD:
- action_has_any_display_cb_on_label:2 "@war_icon! Вы можете объявить войну персонажу [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]" # HIDE LEVIES MOD
- # HIDE LEVIES MOD:
- action_has_any_display_cb_on_combined_label:1 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]" # HIDE LEVIES MOD
+ # HIDE_LEVIES MOD:
+ action_has_any_display_cb_on_label:2 "@war_icon! Вы можете объявить войну персонажу [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]" # HIDE_LEVIES MOD
+ # HIDE_LEVIES MOD:
+ action_has_any_display_cb_on_combined_label:1 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]" # HIDE_LEVIES MOD
  action_has_any_display_cb_on_click: "#I Щелкните, чтобы узнать, что такое [casus_bellis|El]#!"
  action_has_any_display_cb_on_combined_unimportant: "@warning_icon! #X У вас самая слабая [army|El]#!"
  action_has_any_display_cb_on_unimportant: "@warning_icon! #X [recipient.GetHersHis|U] [army|El] сильнее вашей#!"
@@ -463,10 +463,10 @@
  action_can_propose_alliance_to_family_member_combined_group_name: "$action_can_propose_alliance_to_family_member_combined_group_label$"
  action_can_propose_alliance_to_family_member_desc: "Вы и [Select_CString(recipient.IsFemale, 'ваша', 'ваш' )] [actor.Custom2('RelationToMe', recipient)] [recipient.GetUIName] можете договориться о [Concept( 'alliance', 'союзе' )|E], так как связаны узами крови.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nУчтите, что некоторые [Concept( 'alliances', 'союзы' )|E] приносят больше проблем, чем пользы…\n\nУбедитесь, что этот [alliance|El] действительно необходим: вас могут втянуть в бессмысленные распри.#!"
  action_can_propose_alliance_to_family_member_combined_group_description: "Вы и некоторые члены вашей [Concept( 'family', 'семьи' )|E] либо их супруги можете договориться о [Concept( 'alliance', 'союзе' )|El] без заключения [Concept( 'marriage', 'брака' )|E], так как уже связаны узами крови.#help \n\nУчтите, что некоторые [Concept( 'alliances', 'союзы' )|E] приносят больше проблем, чем пользы…\n\nУбедитесь, что этот [alliance|El] действительно необходим: вас могут втянуть в бессмысленные распри.#!"
- # HIDE LEVIES MOD:
- action_can_propose_alliance_to_family_member_label: "@alliance_icon! Вы и [Select_CString(recipient.IsFemale, 'ваша', 'ваш' )] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip] можете договориться о союзе" # HIDE LEVIES MOD
- # HIDE LEVIES MOD:
- action_can_propose_alliance_to_family_member_combined_label: "[Select_CString(recipient.IsFemale, 'Ваша', 'Ваш' )] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]" # HIDE LEVIES MOD
+ # HIDE_LEVIES MOD:
+ action_can_propose_alliance_to_family_member_label: "@alliance_icon! Вы и [Select_CString(recipient.IsFemale, 'ваша', 'ваш' )] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip] можете договориться о союзе" # HIDE_LEVIES MOD
+ # HIDE_LEVIES MOD:
+ action_can_propose_alliance_to_family_member_combined_label: "[Select_CString(recipient.IsFemale, 'Ваша', 'Ваш' )] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]" # HIDE_LEVIES MOD
  action_can_propose_alliance_to_family_member_click: "#I Щелкните, чтобы договориться о союзе#!"
  action_can_propose_alliance_to_family_member_combined_unimportant: "@warning_icon! #X Вы не сможете вызвать их на войну#!"
  action_can_propose_alliance_to_family_member_unimportant: "@warning_icon! #X Вы не сможете вызвать [Select_CString(recipient.IsFemale, 'ее', 'его' )] на войну#!"
@@ -475,8 +475,8 @@
  action_can_potentially_propose_alliance_to_family_member_combined_group_name: "$action_can_potentially_propose_alliance_to_family_member_combined_group_label$"
  action_can_potentially_propose_alliance_to_family_member_desc: "[Select_CString(recipient.IsFemale, 'Ваша', 'Ваш' )] [actor.Custom2('RelationToMe', recipient)] [recipient.GetUIName] сейчас #EMP не согласится#! на [alliance|El] с вами, однако [recipient.GetHersHis] можно попытаться переубедить.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nЕсли вам необходим союз, попробуйте улучшить чужое [opinion|El] о себе или получите [Concept( 'hook', 'влияние' )|E], чтобы усилить свою позицию.\n\nЧтобы узнать, насколько персонаж согласен на союз, откройте окно взаимодействия с ним и наведите курсор на показатель принятия.#!"
  action_can_potentially_propose_alliance_to_family_member_combined_group_description: "Эти персонажи сейчас #EMP не согласятся#! на [alliance|El] с вами, однако их можно попытаться переубедить.\n\n[actor.Custom2('GetInOrOutsideRealmAllianceInfo', recipient)]#help \n\nЕсли вам необходим союз, попробуйте улучшить чужое [opinion|El] о себе или получите [Concept( 'hook', 'влияние' )|E], чтобы усилить свою позицию.\n\nЧтобы узнать, насколько персонаж согласен на союз, откройте окно взаимодействия с ним и наведите курсор на показатель принятия.#!"
- # HIDE LEVIES MOD:
- action_can_potentially_propose_alliance_to_family_member_label: "@alliance_icon! Вы и [Select_CString(recipient.IsFemale, 'ваша', 'ваш' )] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip] потенциально можете договориться о союзе" # HIDE LEVIES MOD
+ # HIDE_LEVIES MOD:
+ action_can_potentially_propose_alliance_to_family_member_label: "@alliance_icon! Вы и [Select_CString(recipient.IsFemale, 'ваша', 'ваш' )] [actor.Custom2('RelationToMe', recipient)] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetShortUINameNoTooltip] потенциально можете договориться о союзе" # HIDE_LEVIES MOD
  action_can_potentially_propose_alliance_to_family_member_combined_label: "$action_can_propose_alliance_to_family_member_combined_label$"
  action_can_potentially_propose_alliance_to_family_member_click: "#I Щелкните, чтобы просмотреть возможные переговоры о союзе#!"
  action_can_potentially_propose_alliance_to_family_member_combined_unimportant: "@warning_icon! #X Вы уже заключили два или более союза#!"

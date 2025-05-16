@@ -228,7 +228,7 @@ widget = {
 					button_ignore = "[ProvinceIcon.GetArmyIgnoreClick]"
 
 					#tooltip_visible = "[Not(IsInteractionMenuOpenForCharacter(Character.GetID))]"
-					tooltip_visible = no # HIDE_LIVIES
+					tooltip_visible = no # HIDE_LEVIES
 				}
 			}
 
